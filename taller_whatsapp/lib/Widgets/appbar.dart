@@ -16,7 +16,7 @@ class AppBarWhatsApp extends StatefulWidget implements PreferredSizeWidget {
   _AppBarWhatsAppState createState() => _AppBarWhatsAppState();
 
   @override
-  Size get preferredSize => Size.fromHeight(kToolbarHeight);
+  Size get preferredSize => const Size.fromHeight(kToolbarHeight);
 }
 
 class _AppBarWhatsAppState extends State<AppBarWhatsApp> {
@@ -26,27 +26,32 @@ class _AppBarWhatsAppState extends State<AppBarWhatsApp> {
   @override
   Widget build(BuildContext context) {
     return AppBar(
+      backgroundColor: Colors.white,
       title: _isSearching
           ? TextField(
               controller: _searchController,
               autofocus: true,
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 hintText: 'Buscar...',
                 border: InputBorder.none,
                 hintStyle: TextStyle(color: Colors.white),
               ),
-              style: TextStyle(color: Colors.black),
+              style: const TextStyle(color: Colors.black),
             )
           : Text(
-              widget.pantalla == Pantalla.Chats ? 'WhatsApp' : _getTitle(widget.pantalla),
+              widget.pantalla == Pantalla.Chats
+                  ? 'WhatsApp'
+                  : _getTitle(widget.pantalla),
               style: TextStyle(
-                color: widget.pantalla == Pantalla.Chats ? Colors.green : Colors.black,
+                color: widget.pantalla == Pantalla.Chats
+                    ? Colors.green
+                    : Colors.black,
                 fontWeight: FontWeight.bold,
               ),
             ),
       leading: _isSearching
           ? IconButton(
-              icon: Icon(Icons.arrow_back),
+              icon: const Icon(Icons.arrow_back),
               onPressed: () {
                 setState(() {
                   _isSearching = false;
@@ -58,59 +63,57 @@ class _AppBarWhatsAppState extends State<AppBarWhatsApp> {
         if (!_isSearching)
           if (widget.pantalla != Pantalla.Comunidades)
             IconButton(
-              icon: Icon(Icons.search),
-              onPressed: () {
-                setState(() {
-                  _isSearching = !_isSearching;
-                });
+              icon: const Icon(Icons.camera_alt_outlined),
+              onPressed: () async {
+                // Handle camera action
               },
             ),
         IconButton(
-          icon: Icon(Icons.camera_alt),
-          onPressed: () async {
-            // Handle camera action
+          icon: const Icon(Icons.search),
+          onPressed: () {
+            setState(() {
+              _isSearching = !_isSearching;
+            });
           },
         ),
         if (widget.pantalla != Pantalla.Chats)
           PopupMenuButton(
             itemBuilder: (BuildContext context) {
               return [
-                PopupMenuItem(
+                const PopupMenuItem(
                   child: Text("Ajustes"),
                   value: "Ajustes",
                 ),
               ];
             },
           ),
-          if (widget.pantalla == Pantalla.Chats)
+        if (widget.pantalla == Pantalla.Chats)
           PopupMenuButton(
             itemBuilder: (BuildContext context) {
               return [
-                PopupMenuItem(
-                child: Text("Nuevo grupo"),
-                value: "Nuevo grupo",
-              ),
-              PopupMenuItem(
-                child: Text("Mensajes destacados"),
-                value: "Mensajes destacados",
-              ),
-              PopupMenuItem(
-                child: Text("Seleccionar chats"),
-                value: "Seleccionar chats",
-              ),
-              PopupMenuItem(
-                child: Text("Ajustes"),
-                value: "Ajustes",
-              ),
-                PopupMenuItem(
-
+                const PopupMenuItem(
+                  child: Text("Nuevo grupo"),
+                  value: "Nuevo grupo",
+                ),
+                const PopupMenuItem(
+                  child: Text("Mensajes destacados"),
+                  value: "Mensajes destacados",
+                ),
+                const PopupMenuItem(
+                  child: Text("Seleccionar chats"),
+                  value: "Seleccionar chats",
+                ),
+                const PopupMenuItem(
+                  child: Text("Ajustes"),
+                  value: "Ajustes",
+                ),
+                const PopupMenuItem(
                   child: Text("Ajustes"),
                   value: "Ajustes",
                 ),
               ];
             },
           ),
-
       ],
     );
   }
