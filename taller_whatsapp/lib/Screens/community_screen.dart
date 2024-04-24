@@ -91,23 +91,36 @@ class community_screen extends StatelessWidget {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Padding(
-            padding: EdgeInsets.all(16.0),
-            child: Row(
-              children: [
-                Icon(Icons.add_circle,
-                    color: Colors.green), // Icono de agregar en verde
-                SizedBox(width: 8),
-                Text(
-                  'Nueva Comunidad',
-                  style: TextStyle(
-                    color: Colors.green, // Color verde para el título
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-              ],
+           GestureDetector(
+  onTap: () {
+   
+    print('otra comunidad');
+    
+  },
+  child: Padding(
+    padding: EdgeInsets.all(16.0),
+    child: Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Row(
+          children: [
+            Icon(Icons.add_circle, color: Colors.green), // Icono de agregar en verde
+            SizedBox(width: 8),
+            Text(
+              'Nueva comunidad',
+              style: TextStyle(
+                color: Colors.black, // Color verde para el título
+                fontWeight: FontWeight.bold,
+              ),
             ),
-          ),
+          ],
+        ),
+      
+        
+      ],
+    ),
+  ),
+),
           Expanded(
             child: ListView.builder(
               itemCount: estados.length,
