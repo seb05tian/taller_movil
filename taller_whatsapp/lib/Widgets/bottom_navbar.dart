@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:taller_whatsapp/Screens/calls_screen.dart';
 import 'package:taller_whatsapp/Screens/status_screen.dart';
+import 'package:taller_whatsapp/Screens/community_screen.dart';
+
 
 class bottomnavbar extends StatefulWidget {
   const bottomnavbar({super.key});
@@ -18,10 +20,7 @@ class _bottomnavbarState extends State<bottomnavbar> {
       size: 150,
     ),
     status_screen(),
-    const Icon(
-      Icons.tips_and_updates_rounded,
-      size: 150,
-    ),
+    community_screen(),
     calls_screen()
   ];
   void _onItemTapped(int index) {

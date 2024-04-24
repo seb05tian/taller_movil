@@ -87,6 +87,7 @@ class community_screen extends StatelessWidget {
         .size; // Obteniendo las dimensiones del dispositivo
 
     return Scaffold(
+      appBar: AppBarWhatsApp(pantalla: Pantalla.Comunidades),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

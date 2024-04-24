@@ -132,7 +132,7 @@ class status_screen extends StatelessWidget {
 
     return Scaffold(
      
-        appBar: AppBarWhatsApp(pantalla: Pantalla.Novedades),
+        appBar: const AppBarWhatsApp(pantalla: Pantalla.Novedades),
 
         body: ListView.builder(
           padding: EdgeInsets.only(top: size.height * 0.0),
