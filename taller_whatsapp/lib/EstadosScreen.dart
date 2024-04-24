@@ -112,7 +112,7 @@ class EstadosPage extends StatelessWidget {
               expandedHeight: size.height * 0.0, 
               bottom: PreferredSize(
                 preferredSize: Size.fromHeight(0.0), 
-                child: AppBarWhatsApp(pantalla: Pantalla.Comunidades),
+                child: AppBarWhatsApp(pantalla: Pantalla.Llamadas),
               ),
             ),
           ];
