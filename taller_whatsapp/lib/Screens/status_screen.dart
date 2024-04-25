@@ -131,9 +131,7 @@ class status_screen extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
 
     return Scaffold(
-     
         appBar: const AppBarWhatsApp(pantalla: Pantalla.Novedades),
-
         body: ListView.builder(
           padding: EdgeInsets.only(top: size.height * 0.0),
           itemCount: estados.length,
