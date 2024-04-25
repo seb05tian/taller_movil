@@ -91,7 +91,6 @@ class chats_screen extends StatelessWidget {
             ),
             trailing: Text(Chats[index].tiempo),
             onTap: () {
-// Al presionar un chat, navega a la otra pantalla
               Navigator.push(
                 context,
                 MaterialPageRoute(

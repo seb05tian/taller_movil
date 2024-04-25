@@ -2,7 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 enum Pantalla {
-  Chat,
   Chats,
   Novedades,
   Comunidades,
@@ -27,7 +26,6 @@ class _AppBarWhatsAppState extends State<AppBarWhatsApp> {
 
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
     return AppBar(
       backgroundColor: Colors.white,
       title: _isSearching
@@ -52,67 +50,33 @@ class _AppBarWhatsAppState extends State<AppBarWhatsApp> {
                 fontWeight: FontWeight.bold,
               ),
             ),
-      leading: Row(
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: [
-          Container(
-            decoration: BoxDecoration(color: Colors.black),
-            child: _isSearching
-                ? IconButton(
-                    icon: const Icon(Icons.arrow_back),
-                    onPressed: () {
-                      setState(() {
-                        _isSearching = false;
-                      });
-                    },
-                  )
-                : null,
-          ),
-          SizedBox(
-            width: 10,
-          ),
-          if (widget.pantalla == Pantalla.Chat)
-            CircleAvatar(
-              radius: 20,
-              backgroundImage: AssetImage('assets/img/abogado.png'),
-            ),
-        ],
-      ),
+      leading: _isSearching
+          ? IconButton(
+              icon: const Icon(Icons.arrow_back),
+              onPressed: () {
+                setState(() {
+                  _isSearching = false;
+                });
+              },
+            )
+          : null,
       actions: <Widget>[
-        if (widget.pantalla == Pantalla.Chat)
-          Row(
-            children: [
-              IconButton(
-                iconSize: size.height * 0.045,
-                icon: Icon(CupertinoIcons.video_camera),
-                onPressed: () {},
-              ),
-              IconButton(
-                icon: const Icon(Icons.call),
-                onPressed: () async {
-                  // Handle camera action
-                },
-              ),
-            ],
-          ),
         if (!_isSearching)
-          if (widget.pantalla != Pantalla.Comunidades &&
-              widget.pantalla != Pantalla.Chat)
+          if (widget.pantalla != Pantalla.Comunidades)
             IconButton(
               icon: const Icon(Icons.camera_alt_outlined),
               onPressed: () async {
                 // Handle camera action
               },
             ),
-        if (widget.pantalla != Pantalla.Chat)
-          IconButton(
-            icon: const Icon(Icons.search),
-            onPressed: () {
-              setState(() {
-                _isSearching = !_isSearching;
-              });
-            },
-          ),
+        IconButton(
+          icon: const Icon(Icons.search),
+          onPressed: () {
+            setState(() {
+              _isSearching = !_isSearching;
+            });
+          },
+        ),
         if (widget.pantalla != Pantalla.Chats)
           PopupMenuButton(
             itemBuilder: (BuildContext context) {
@@ -163,8 +127,6 @@ class _AppBarWhatsAppState extends State<AppBarWhatsApp> {
         return 'Comunidades';
       case Pantalla.Llamadas:
         return 'Llamadas';
-      case Pantalla.Chat:
-        return 'Sebastian';
       default:
         return 'WhatsApp';
     }
