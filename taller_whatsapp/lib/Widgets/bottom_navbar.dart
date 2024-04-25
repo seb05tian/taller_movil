@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:taller_whatsapp/Screens/calls_screen.dart';
+import 'package:taller_whatsapp/Screens/chats_screen.dart';
 import 'package:taller_whatsapp/Screens/status_screen.dart';
 import 'package:taller_whatsapp/Screens/community_screen.dart';
-
 
 class bottomnavbar extends StatefulWidget {
   const bottomnavbar({super.key});
@@ -15,13 +15,10 @@ class _bottomnavbarState extends State<bottomnavbar> {
   int _selectedIndex = 0;
   //aca colocan los widgets de las pantallas que vayan haciendo, en el orden que van, chat, updates, communities, calls
   final List<Widget> _pages = <Widget>[
-    const Icon(
-      Icons.chat,
-      size: 150,
-    ),
+    chats_screen(),
     status_screen(),
     community_screen(),
-    calls_screen()
+    calls_screen(),
   ];
   void _onItemTapped(int index) {
     setState(() {
@@ -32,6 +29,7 @@ class _bottomnavbarState extends State<bottomnavbar> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
+    print("INDEX: $_selectedIndex");
     return Scaffold(
         body: IndexedStack(index: _selectedIndex, children: _pages),
         bottomNavigationBar: Theme(
