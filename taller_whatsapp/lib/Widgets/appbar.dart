@@ -52,12 +52,7 @@ class _AppBarWhatsAppState extends State<AppBarWhatsApp> {
                 fontWeight: FontWeight.bold,
               ),
             ),
-      leading: Row(
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: [
-          Container(
-            decoration: BoxDecoration(color: Colors.black),
-            child: _isSearching
+      leading: _isSearching
                 ? IconButton(
                     icon: const Icon(Icons.arrow_back),
                     onPressed: () {
@@ -67,17 +62,7 @@ class _AppBarWhatsAppState extends State<AppBarWhatsApp> {
                     },
                   )
                 : null,
-          ),
-          SizedBox(
-            width: 10,
-          ),
-          if (widget.pantalla == Pantalla.Chat)
-            CircleAvatar(
-              radius: 20,
-              backgroundImage: AssetImage('assets/img/abogado.png'),
-            ),
-        ],
-      ),
+          
       actions: <Widget>[
         if (widget.pantalla == Pantalla.Chat)
           Row(
@@ -96,7 +81,7 @@ class _AppBarWhatsAppState extends State<AppBarWhatsApp> {
             ],
           ),
         if (!_isSearching)
-          if (widget.pantalla != Pantalla.Comunidades &&
+          if (
               widget.pantalla != Pantalla.Chat)
             IconButton(
               icon: const Icon(Icons.camera_alt_outlined),
@@ -104,7 +89,7 @@ class _AppBarWhatsAppState extends State<AppBarWhatsApp> {
                 // Handle camera action
               },
             ),
-        if (widget.pantalla != Pantalla.Chat)
+        if (widget.pantalla != Pantalla.Comunidades && widget.pantalla != Pantalla.Chat)
           IconButton(
             icon: const Icon(Icons.search),
             onPressed: () {
@@ -144,10 +129,7 @@ class _AppBarWhatsAppState extends State<AppBarWhatsApp> {
                   child: Text("Ajustes"),
                   value: "Ajustes",
                 ),
-                const PopupMenuItem(
-                  child: Text("Ajustes"),
-                  value: "Ajustes",
-                ),
+                
               ];
             },
           ),
