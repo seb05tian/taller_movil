@@ -1,12 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:taller_whatsapp/Screens/Ajustes_screen.dart';
 
-enum Pantalla {
-  Chats,
-  Novedades,
-  Comunidades,
-  Llamadas,
-}
+enum Pantalla { Chat, Chats, Novedades, Comunidades, Llamadas, Ajustes }
 
 class AppBarWhatsApp extends StatefulWidget implements PreferredSizeWidget {
   final Pantalla pantalla;
@@ -26,6 +22,7 @@ class _AppBarWhatsAppState extends State<AppBarWhatsApp> {
 
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return AppBar(
       backgroundColor: Colors.white,
       title: _isSearching
@@ -50,45 +47,82 @@ class _AppBarWhatsAppState extends State<AppBarWhatsApp> {
                 fontWeight: FontWeight.bold,
               ),
             ),
-      leading: _isSearching
+      leading: widget.pantalla == Pantalla.Ajustes
           ? IconButton(
               icon: const Icon(Icons.arrow_back),
               onPressed: () {
-                setState(() {
-                  _isSearching = false;
-                });
+                Navigator.pop(context);
               },
             )
-          : null,
+          : _isSearching
+              ? IconButton(
+                  icon: const Icon(Icons.arrow_back),
+                  onPressed: () {
+                    setState(() {
+                      _isSearching = false;
+                    });
+                  },
+                )
+              : null,
       actions: <Widget>[
+        if (widget.pantalla == Pantalla.Chat)
+          Row(
+            children: [
+              IconButton(
+                iconSize: size.height * 0.045,
+                icon: Icon(CupertinoIcons.video_camera),
+                onPressed: () {},
+              ),
+              IconButton(
+                icon: const Icon(Icons.call),
+                onPressed: () async {
+                  // Handle camera action
+                },
+              ),
+            ],
+          ),
         if (!_isSearching)
-          if (widget.pantalla != Pantalla.Comunidades)
+          if (widget.pantalla != Pantalla.Chat &&
+              widget.pantalla != Pantalla.Ajustes)
             IconButton(
               icon: const Icon(Icons.camera_alt_outlined),
               onPressed: () async {
                 // Handle camera action
               },
             ),
-        IconButton(
-          icon: const Icon(Icons.search),
-          onPressed: () {
-            setState(() {
-              _isSearching = !_isSearching;
-            });
-          },
-        ),
-        if (widget.pantalla != Pantalla.Chats)
+        if (widget.pantalla != Pantalla.Comunidades &&
+            widget.pantalla != Pantalla.Chat)
+          IconButton(
+            icon: const Icon(Icons.search),
+            onPressed: () {
+              setState(() {
+                _isSearching = !_isSearching;
+              });
+            },
+          ),
+        if (widget.pantalla != Pantalla.Chats &&
+            widget.pantalla != Pantalla.Ajustes)
           PopupMenuButton(
             itemBuilder: (BuildContext context) {
               return [
-                const PopupMenuItem(
+                PopupMenuItem(
                   child: Text("Ajustes"),
                   value: "Ajustes",
+                  onTap: () {
+                    // Al presionar un chat, navega a la otra pantalla
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => Ajustes_screen(),
+                      ),
+                    );
+                  },
                 ),
               ];
             },
           ),
-        if (widget.pantalla == Pantalla.Chats)
+        if (widget.pantalla == Pantalla.Chats &&
+            widget.pantalla != Pantalla.Ajustes)
           PopupMenuButton(
             itemBuilder: (BuildContext context) {
               return [
@@ -104,13 +138,18 @@ class _AppBarWhatsAppState extends State<AppBarWhatsApp> {
                   child: Text("Seleccionar chats"),
                   value: "Seleccionar chats",
                 ),
-                const PopupMenuItem(
+                PopupMenuItem(
                   child: Text("Ajustes"),
                   value: "Ajustes",
-                ),
-                const PopupMenuItem(
-                  child: Text("Ajustes"),
-                  value: "Ajustes",
+                  onTap: () {
+                    // Al presionar un chat, navega a la otra pantalla
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => Ajustes_screen(),
+                      ),
+                    );
+                  },
                 ),
               ];
             },
@@ -127,6 +166,10 @@ class _AppBarWhatsAppState extends State<AppBarWhatsApp> {
         return 'Comunidades';
       case Pantalla.Llamadas:
         return 'Llamadas';
+      case Pantalla.Chat:
+        return 'Sebastian';
+      case Pantalla.Ajustes:
+        return 'Ajustes';
       default:
         return 'WhatsApp';
     }

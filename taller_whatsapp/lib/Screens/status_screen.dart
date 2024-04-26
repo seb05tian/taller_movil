@@ -27,103 +27,121 @@ class status_screen extends StatelessWidget {
       tiempo: 'hace 30 minutos',
       imagen: 'assets/img/abogado.png',
       contenido: 'Trabajando duro en mi caso legal.',
-    ),status(
-      nombre: 'Juan Pérez',
-      tiempo: 'hace 30 minutos',
-      imagen: 'assets/img/abogado.png',
-      contenido: 'Trabajando duro en mi caso legal.',
-    ),status(
-      nombre: 'Juan Pérez',
-      tiempo: 'hace 30 minutos',
-      imagen: 'assets/img/abogado.png',
-      contenido: 'Trabajando duro en mi caso legal.',
-    ),status(
-      nombre: 'Juan Pérez',
-      tiempo: 'hace 30 minutos',
-      imagen: 'assets/img/abogado.png',
-      contenido: 'Trabajando duro en mi caso legal.',
-    ),status(
-      nombre: 'Juan Pérez',
-      tiempo: 'hace 30 minutos',
-      imagen: 'assets/img/abogado.png',
-      contenido: 'Trabajando duro en mi caso legal.',
-    ),status(
-      nombre: 'Juan Pérez',
-      tiempo: 'hace 30 minutos',
-      imagen: 'assets/img/abogado.png',
-      contenido: 'Trabajando duro en mi caso legal.',
-    ),status(
-      nombre: 'Juan Pérez',
-      tiempo: 'hace 30 minutos',
-      imagen: 'assets/img/abogado.png',
-      contenido: 'Trabajando duro en mi caso legal.',
-    ),status(
-      nombre: 'Juan Pérez',
-      tiempo: 'hace 30 minutos',
-      imagen: 'assets/img/abogado.png',
-      contenido: 'Trabajando duro en mi caso legal.',
-    ),status(
-      nombre: 'Juan Pérez',
-      tiempo: 'hace 30 minutos',
-      imagen: 'assets/img/abogado.png',
-      contenido: 'Trabajando duro en mi caso legal.',
-    ),status(
-      nombre: 'Juan Pérez',
-      tiempo: 'hace 30 minutos',
-      imagen: 'assets/img/abogado.png',
-      contenido: 'Trabajando duro en mi caso legal.',
-    ),status(
-      nombre: 'Juan Pérez',
-      tiempo: 'hace 30 minutos',
-      imagen: 'assets/img/abogado.png',
-      contenido: 'Trabajando duro en mi caso legal.',
-    ),status(
-      nombre: 'Juan Pérez',
-      tiempo: 'hace 30 minutos',
-      imagen: 'assets/img/abogado.png',
-      contenido: 'Trabajando duro en mi caso legal.',
-    ),status(
-      nombre: 'Juan Pérez',
-      tiempo: 'hace 30 minutos',
-      imagen: 'assets/img/abogado.png',
-      contenido: 'Trabajando duro en mi caso legal.',
-    ),status(
-      nombre: 'Juan Pérez',
-      tiempo: 'hace 30 minutos',
-      imagen: 'assets/img/abogado.png',
-      contenido: 'Trabajando duro en mi caso legal.',
-    ),status(
-      nombre: 'Juan Pérez',
-      tiempo: 'hace 30 minutos',
-      imagen: 'assets/img/abogado.png',
-      contenido: 'Trabajando duro en mi caso legal.',
-    ),status(
-      nombre: 'Juan Pérez',
-      tiempo: 'hace 30 minutos',
-      imagen: 'assets/img/abogado.png',
-      contenido: 'Trabajando duro en mi caso legal.',
-    ),status(
-      nombre: 'Juan Pérez',
-      tiempo: 'hace 30 minutos',
-      imagen: 'assets/img/abogado.png',
-      contenido: 'Trabajando duro en mi caso legal.',
-    ),status(
-      nombre: 'Juan Pérez',
-      tiempo: 'hace 30 minutos',
-      imagen: 'assets/img/abogado.png',
-      contenido: 'Trabajando duro en mi caso legal.',
-    ),status(
-      nombre: 'Juan Pérez',
-      tiempo: 'hace 30 minutos',
-      imagen: 'assets/img/abogado.png',
-      contenido: 'Trabajando duro en mi caso legal.',
-    ),status(
+    ),
+    status(
       nombre: 'Juan Pérez',
       tiempo: 'hace 30 minutos',
       imagen: 'assets/img/abogado.png',
       contenido: 'Trabajando duro en mi caso legal.',
     ),
-    
+    status(
+      nombre: 'Juan Pérez',
+      tiempo: 'hace 30 minutos',
+      imagen: 'assets/img/abogado.png',
+      contenido: 'Trabajando duro en mi caso legal.',
+    ),
+    status(
+      nombre: 'Juan Pérez',
+      tiempo: 'hace 30 minutos',
+      imagen: 'assets/img/abogado.png',
+      contenido: 'Trabajando duro en mi caso legal.',
+    ),
+    status(
+      nombre: 'Juan Pérez',
+      tiempo: 'hace 30 minutos',
+      imagen: 'assets/img/abogado.png',
+      contenido: 'Trabajando duro en mi caso legal.',
+    ),
+    status(
+      nombre: 'Juan Pérez',
+      tiempo: 'hace 30 minutos',
+      imagen: 'assets/img/abogado.png',
+      contenido: 'Trabajando duro en mi caso legal.',
+    ),
+    status(
+      nombre: 'Juan Pérez',
+      tiempo: 'hace 30 minutos',
+      imagen: 'assets/img/abogado.png',
+      contenido: 'Trabajando duro en mi caso legal.',
+    ),
+    status(
+      nombre: 'Juan Pérez',
+      tiempo: 'hace 30 minutos',
+      imagen: 'assets/img/abogado.png',
+      contenido: 'Trabajando duro en mi caso legal.',
+    ),
+    status(
+      nombre: 'Juan Pérez',
+      tiempo: 'hace 30 minutos',
+      imagen: 'assets/img/abogado.png',
+      contenido: 'Trabajando duro en mi caso legal.',
+    ),
+    status(
+      nombre: 'Juan Pérez',
+      tiempo: 'hace 30 minutos',
+      imagen: 'assets/img/abogado.png',
+      contenido: 'Trabajando duro en mi caso legal.',
+    ),
+    status(
+      nombre: 'Juan Pérez',
+      tiempo: 'hace 30 minutos',
+      imagen: 'assets/img/abogado.png',
+      contenido: 'Trabajando duro en mi caso legal.',
+    ),
+    status(
+      nombre: 'Juan Pérez',
+      tiempo: 'hace 30 minutos',
+      imagen: 'assets/img/abogado.png',
+      contenido: 'Trabajando duro en mi caso legal.',
+    ),
+    status(
+      nombre: 'Juan Pérez',
+      tiempo: 'hace 30 minutos',
+      imagen: 'assets/img/abogado.png',
+      contenido: 'Trabajando duro en mi caso legal.',
+    ),
+    status(
+      nombre: 'Juan Pérez',
+      tiempo: 'hace 30 minutos',
+      imagen: 'assets/img/abogado.png',
+      contenido: 'Trabajando duro en mi caso legal.',
+    ),
+    status(
+      nombre: 'Juan Pérez',
+      tiempo: 'hace 30 minutos',
+      imagen: 'assets/img/abogado.png',
+      contenido: 'Trabajando duro en mi caso legal.',
+    ),
+    status(
+      nombre: 'Juan Pérez',
+      tiempo: 'hace 30 minutos',
+      imagen: 'assets/img/abogado.png',
+      contenido: 'Trabajando duro en mi caso legal.',
+    ),
+    status(
+      nombre: 'Juan Pérez',
+      tiempo: 'hace 30 minutos',
+      imagen: 'assets/img/abogado.png',
+      contenido: 'Trabajando duro en mi caso legal.',
+    ),
+    status(
+      nombre: 'Juan Pérez',
+      tiempo: 'hace 30 minutos',
+      imagen: 'assets/img/abogado.png',
+      contenido: 'Trabajando duro en mi caso legal.',
+    ),
+    status(
+      nombre: 'Juan Pérez',
+      tiempo: 'hace 30 minutos',
+      imagen: 'assets/img/abogado.png',
+      contenido: 'Trabajando duro en mi caso legal.',
+    ),
+    status(
+      nombre: 'Juan Pérez',
+      tiempo: 'hace 30 minutos',
+      imagen: 'assets/img/abogado.png',
+      contenido: 'Trabajando duro en mi caso legal.',
+    ),
   ];
 
   @override
@@ -131,17 +149,14 @@ class status_screen extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
 
     return Scaffold(
-     
-        appBar: const AppBarWhatsApp(pantalla: Pantalla.Novedades),
-
-
-
-
-  body: Column(
+      appBar: const AppBarWhatsApp(pantalla: Pantalla.Novedades),
+      body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
- AppBar(
-            title: Text('Estados', style: TextStyle(color: Colors.black)), // Nuevo appbar debajo del original
+          AppBar(
+            title: const Text('Estados',
+                style: TextStyle(
+                    color: Colors.black)), // Nuevo appbar debajo del original
             backgroundColor: Colors.white,
             actions: [
               PopupMenuButton(
@@ -152,7 +167,7 @@ class status_screen extends StatelessWidget {
                         onTap: () {
                           print('Privacidad de datos seleccionada');
                         },
-                        child: Text('Privacidad de datos'),
+                        child: const Text('Privacidad de datos'),
                       ),
                     ),
                   ];
@@ -160,64 +175,48 @@ class status_screen extends StatelessWidget {
               ),
             ],
           ),
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-         GestureDetector(
-  onTap: () {
-   
-    print('En la playita reposado manejando la tranquilidad');
-    
-  },
-  child: Padding(
-    padding: EdgeInsets.all(16.0),
-    child: Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Row(
-          children: [
-            Icon(Icons.add_circle, color: Colors.green), // Icono de agregar en verde
-            SizedBox(width: 8),
-            Text(
-              'Mi estado',
-              style: TextStyle(
-                color: Colors.black, // Color verde para el título
-                fontWeight: FontWeight.bold,
+          GestureDetector(
+            onTap: () {
+              print('En la playita reposado manejando la tranquilidad');
+            },
+            child: const Padding(
+              padding: EdgeInsets.all(16.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    children: [
+                      Icon(Icons.add_circle,
+                          color: Colors.green), // Icono de agregar en verde
+                      SizedBox(width: 8),
+                      Text(
+                        'Mi estado',
+                        style: TextStyle(
+                          color: Colors.black, // Color verde para el título
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ],
+                  ),
+                  SizedBox(height: 4),
+                  Row(
+                    children: [
+                      SizedBox(
+                          width:
+                              32), // Espacio adicional para desplazar el texto hacia la derecha
+                      Text(
+                        'Añade una actualización',
+                        style: TextStyle(
+                          color:
+                              Colors.grey, // Color gris para el texto adicional
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
               ),
             ),
-          ],
-        ),
-        SizedBox(height: 4),
-        Row(
-          children: [
-            SizedBox(width: 32), // Espacio adicional para desplazar el texto hacia la derecha
-            Text(
-              'Añade una actualización',
-              style: TextStyle(
-                color: Colors.grey, // Color gris para el texto adicional
-              ),
-            ),
-          ],
-        ),
-      ],
-    ),
-  ),
-),
-
+          ),
           Expanded(
             child: ListView.builder(
               itemCount: estados.length,
@@ -237,15 +236,8 @@ class status_screen extends StatelessWidget {
               },
             ),
           ),
-         
-         
         ],
       ),
-
-
-
-
-             
     );
   }
 }
