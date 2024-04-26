@@ -75,7 +75,7 @@ class LinkedDevices extends StatelessWidget {
                 SizedBox(
                   height: size.height * 0.005,
                 ),
-                Text('Tap a device to log out'),
+                const Text('Tap a device to log out'),
               ],
             ),
           ),
@@ -83,14 +83,14 @@ class LinkedDevices extends StatelessWidget {
             height: size.height * 0.01,
           ),
           ListTile(
-            leading: CircleAvatar(
+            leading: const CircleAvatar(
               foregroundImage: AssetImage('assets/img/edge.png'),
             ),
             title: Text(
               'Microsoft Edge (Windows)',
               style: TextStyle(fontSize: size.height * 0.02),
             ),
-            subtitle: Text('Last active yesterday at 10:48 PM'),
+            subtitle: const Text('Last active yesterday at 10:48 PM'),
             onTap: () {},
           ),
           Padding(

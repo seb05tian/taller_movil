@@ -150,9 +150,9 @@ class _ChatView extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
         child: Container(
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         image: DecorationImage(
-            image: AssetImage('assets/img/fondo.png'), fit: BoxFit.cover),
+            image: const AssetImage('assets/img/fondo.png'), fit: BoxFit.cover),
       ),
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 8),

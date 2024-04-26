@@ -84,7 +84,7 @@ class _AppBarWhatsAppState extends State<AppBarWhatsApp> {
               children: [
                 IconButton(
                   iconSize: size.height * 0.045,
-                  icon: Icon(CupertinoIcons.video_camera),
+                  icon: const Icon(CupertinoIcons.video_camera),
                   onPressed: () {},
                 ),
                 IconButton(
@@ -145,7 +145,7 @@ class _AppBarWhatsAppState extends State<AppBarWhatsApp> {
             itemBuilder: (BuildContext context) {
               return [
                 PopupMenuItem(
-                  child: Text("New group"),
+                  child: const Text("New group"),
                   value: "New group",
                   onTap: () {
                     // Al presionar un chat, navega a la otra pantalla
@@ -158,8 +158,8 @@ class _AppBarWhatsAppState extends State<AppBarWhatsApp> {
                   },
                 ),
                 PopupMenuItem(
-                  child: Text("new broadcast"),
-                  value: "new broadcast",
+                  child: const Text("New broadcast"),
+                  value: "New broadcast",
                   onTap: () {
                     // Al presionar un chat, navega a la otra pantalla
                     Navigator.push(
@@ -169,10 +169,6 @@ class _AppBarWhatsAppState extends State<AppBarWhatsApp> {
                       ),
                     );
                   },
-                ),
-                const PopupMenuItem(
-                  child: Text("Linked devices"),
-                  value: "Linked devices",
                 ),
                 PopupMenuItem(
                   child: const Text("Linked devices"),
@@ -187,7 +183,7 @@ class _AppBarWhatsAppState extends State<AppBarWhatsApp> {
                   },
                 ),
                 PopupMenuItem(
-                  child: const Text("Starred messages"),
+                  child:  const Text("Starred messages"),
                   value: "Starred messages",
                   onTap: () {
                     // Al presionar un chat, navega a la otra pantalla
@@ -200,7 +196,7 @@ class _AppBarWhatsAppState extends State<AppBarWhatsApp> {
                   },
                 ),
                 PopupMenuItem(
-                  child: const Text("Settings"),
+                  child:  const Text("Settings"),
                   value: "Settings",
                   onTap: () {
                     // Al presionar un chat, navega a la otra pantalla
@@ -232,9 +228,9 @@ class _AppBarWhatsAppState extends State<AppBarWhatsApp> {
       case Pantalla.Settings:
         return 'Settings';
       case Pantalla.NuevoGrupo:
-        return 'Nuevo grupo';
+        return 'New group';
       case Pantalla.Difucion:
-        return 'Difucion';
+        return 'Broadcast';
       default:
         return 'WhatsApp';
     }

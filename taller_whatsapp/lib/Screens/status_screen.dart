@@ -111,7 +111,7 @@ class status_screen extends StatelessWidget {
                         onTap: () {
                           print('Privacidad de datos seleccionada');
                         },
-                        child: const Text('Status privacy'),
+                        child:  const Text('Status privacy'),
                       ),
                     ),
                   ];
@@ -123,7 +123,7 @@ class status_screen extends StatelessWidget {
             onTap: () {
               print('En la playita reposado manejando la tranquilidad');
             },
-            child: const Padding(
+            child:  const Padding(
               padding: EdgeInsets.all(16.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -191,7 +191,7 @@ class status_screen extends StatelessWidget {
           Icons.camera_alt,
           color: Colors.white,
         ),
-        backgroundColor: Color(0xFF2d9962),
+        backgroundColor: const Color(0xFF2d9962),
       ),
     );
   }

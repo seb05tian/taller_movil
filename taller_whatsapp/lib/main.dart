@@ -12,7 +12,7 @@ class mainscreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: const bottomnavbar(),);
+      home: bottomnavbar(),);
     
   }
 }
