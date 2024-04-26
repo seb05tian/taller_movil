@@ -85,7 +85,7 @@ class Ajustes_screen extends StatelessWidget {
           ),
           ListTile(
             leading: Icon(Icons.lock),
-            title: Text('Account'),
+            title: Text('Privacy'),
             subtitle: Text(
               'Block contacts, temporary messages',
               style: TextStyle(

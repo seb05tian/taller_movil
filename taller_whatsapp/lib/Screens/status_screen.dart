@@ -218,24 +218,33 @@ class status_screen extends StatelessWidget {
             ),
           ),
           Expanded(
-            child: ListView.builder(
-              itemCount: estados.length,
-              itemBuilder: (context, index) {
-                return ListTile(
-                  leading: CircleAvatar(
-                    radius: size.height *
-                        0.03, 
-                    backgroundImage: AssetImage(estados[index].imagen),
-                  ),
-                  title: Text(estados[index].nombre),
-                  subtitle: Text(estados[index].tiempo),
-                  onTap: () {
-                  
-                  },
-                );
-              },
+  child: ListView.builder(
+    itemCount: estados.length,
+    itemBuilder: (context, index) {
+      return ListTile(
+        leading: Container(
+          decoration: BoxDecoration(
+            border: Border.all(
+              color: Colors.green,
+              width: 3.0,
             ),
+            borderRadius: BorderRadius.circular(50.0),
           ),
+          child: CircleAvatar(
+            radius: size.height * 0.03,
+            backgroundImage: AssetImage(estados[index].imagen),
+          ),
+        ),
+        title: Text(estados[index].nombre),
+        subtitle: Text(estados[index].tiempo),
+        onTap: () {
+      
+        },
+      );
+    },
+  ),
+),
+
         ],
       ),
     );
