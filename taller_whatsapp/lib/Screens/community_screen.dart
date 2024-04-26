@@ -78,13 +78,13 @@ class community_screen extends StatelessWidget {
       imagen: 'assets/img/abogado.png',
     ),
 
-    // Agrega más estados aquí si es necesario
+   
   ];
 
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context)
-        .size; // Obteniendo las dimensiones del dispositivo
+        .size; 
 
     return Scaffold(
       appBar: AppBarWhatsApp(pantalla: Pantalla.Comunidades),
@@ -103,12 +103,12 @@ class community_screen extends StatelessWidget {
                   Row(
                     children: [
                       Icon(Icons.add_circle,
-                          color: Colors.green), // Icono de agregar en verde
+                          color: Colors.green), 
                       SizedBox(width: 8),
                       Text(
                         'Nueva comunidad',
                         style: TextStyle(
-                          color: Colors.black, // Color verde para el título
+                          color: Colors.black, 
                           fontWeight: FontWeight.bold,
                         ),
                       ),
@@ -125,12 +125,12 @@ class community_screen extends StatelessWidget {
                 return ListTile(
                   leading: CircleAvatar(
                     radius: size.height *
-                        0.03, // Utilizando el ancho de la pantalla para determinar el tamaño del avatar
+                        0.03, 
                     backgroundImage: AssetImage(estados[index].imagen),
                   ),
                   title: Text(estados[index].nombre),
                   onTap: () {
-                    // Acción al hacer tap en el estado
+                    
                   },
                 );
               },
@@ -141,12 +141,12 @@ class community_screen extends StatelessWidget {
             child: Row(
               children: [
                 Icon(Icons.announcement,
-                    color: Colors.green), // Icono de megáfono en verde
+                    color: Colors.green), 
                 SizedBox(width: 8),
                 Text(
                   'Avisos',
                   style: TextStyle(
-                    color: Colors.green, // Color verde para el título de Avisos
+                    color: Colors.green, 
                     fontWeight: FontWeight.bold,
                   ),
                 ),
@@ -158,15 +158,15 @@ class community_screen extends StatelessWidget {
             child: Text(
               '¡Te damos la bienvenida a tu comunidad!',
               style: TextStyle(
-                  color: Colors.grey), // Color gris para el texto de bienvenida
+                  color: Colors.grey), 
             ),
           ),
           Container(
             width: double.infinity,
-            color: Colors.grey[200], // Color de fondo gris claro
+            color: Colors.grey[200], 
             child: TextButton(
               onPressed: () {
-                // Lógica para ver todas las comunidades
+                
               },
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.start,
@@ -174,7 +174,7 @@ class community_screen extends StatelessWidget {
                   Text(
                     '>     Ver todos',
                     style: TextStyle(
-                        color: Colors.grey), // Color gris para el texto
+                        color: Colors.grey), 
                   ),
                 ],
               ),

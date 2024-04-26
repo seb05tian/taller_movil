@@ -154,9 +154,9 @@ class status_screen extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           AppBar(
-            title: const Text('Estados',
+            title: const Text('Status',
                 style: TextStyle(
-                    color: Colors.black)), // Nuevo appbar debajo del original
+                    color: Colors.black)), 
             backgroundColor: Colors.white,
             actions: [
               PopupMenuButton(
@@ -187,12 +187,12 @@ class status_screen extends StatelessWidget {
                   Row(
                     children: [
                       Icon(Icons.add_circle,
-                          color: Colors.green), // Icono de agregar en verde
+                          color: Colors.green),
                       SizedBox(width: 8),
                       Text(
                         'Mi estado',
                         style: TextStyle(
-                          color: Colors.black, // Color verde para el título
+                          color: Colors.black, 
                           fontWeight: FontWeight.bold,
                         ),
                       ),
@@ -203,12 +203,12 @@ class status_screen extends StatelessWidget {
                     children: [
                       SizedBox(
                           width:
-                              32), // Espacio adicional para desplazar el texto hacia la derecha
+                              32), 
                       Text(
                         'Añade una actualización',
                         style: TextStyle(
                           color:
-                              Colors.grey, // Color gris para el texto adicional
+                              Colors.grey, 
                         ),
                       ),
                     ],
@@ -224,13 +224,13 @@ class status_screen extends StatelessWidget {
                 return ListTile(
                   leading: CircleAvatar(
                     radius: size.height *
-                        0.03, // Utilizando el ancho de la pantalla para determinar el tamaño del avatar
+                        0.03, 
                     backgroundImage: AssetImage(estados[index].imagen),
                   ),
                   title: Text(estados[index].nombre),
                   subtitle: Text(estados[index].tiempo),
                   onTap: () {
-                    // Acción al hacer tap en el estado
+                  
                   },
                 );
               },

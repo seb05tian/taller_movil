@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:taller_whatsapp/Screens/Ajustes_screen.dart';
+import 'package:taller_whatsapp/Screens/Settings_screen.dart';
 
 enum Pantalla {
   Chat,
@@ -150,7 +150,7 @@ class _AppBarWhatsAppState extends State<AppBarWhatsApp> {
   child: Text("Ajustes"),
   value: "Ajustes",
   onTap: () {
-    // Al presionar un chat, navega a la otra pantalla
+    
     Navigator.push(
       context,
       MaterialPageRoute(
@@ -170,15 +170,15 @@ class _AppBarWhatsAppState extends State<AppBarWhatsApp> {
   String _getTitle(Pantalla pantalla) {
     switch (pantalla) {
       case Pantalla.Novedades:
-        return 'Novedades';
+        return 'Updates';
       case Pantalla.Comunidades:
-        return 'Comunidades';
+        return 'Communities';
       case Pantalla.Llamadas:
-        return 'Llamadas';
+        return 'Calls';
       case Pantalla.Chat:
         return 'Sebastian';
       case Pantalla.Ajustes:
-        return 'Ajustes';
+        return 'Settings';
       default:
         return 'WhatsApp';
     }
