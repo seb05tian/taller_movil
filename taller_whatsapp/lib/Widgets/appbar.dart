@@ -1,8 +1,19 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:taller_whatsapp/Screens/Settings_screen.dart';
+import 'package:taller_whatsapp/Screens/new_broadcast.dart';
+import 'package:taller_whatsapp/Screens/new_group.dart';
 
-enum Pantalla { Chat, Chats, Novedades, Comunidades, Llamadas, Ajustes }
+enum Pantalla {
+  Chat,
+  Chats,
+  Novedades,
+  Comunidades,
+  Llamadas,
+  Ajustes,
+  NuevoGrupo,
+  Difucion
+}
 
 class AppBarWhatsApp extends StatefulWidget implements PreferredSizeWidget {
   final Pantalla pantalla;
@@ -65,25 +76,28 @@ class _AppBarWhatsAppState extends State<AppBarWhatsApp> {
                 )
               : null,
       actions: <Widget>[
-        if (widget.pantalla == Pantalla.Chat)
-          Row(
-            children: [
-              IconButton(
-                iconSize: size.height * 0.045,
-                icon: Icon(CupertinoIcons.video_camera),
-                onPressed: () {},
-              ),
-              IconButton(
-                icon: const Icon(Icons.call),
-                onPressed: () async {
-                  // Handle camera action
-                },
-              ),
-            ],
-          ),
+        if (widget.pantalla == Pantalla.NuevoGrupo)
+          if (widget.pantalla == Pantalla.Chat)
+            Row(
+              children: [
+                IconButton(
+                  iconSize: size.height * 0.045,
+                  icon: Icon(CupertinoIcons.video_camera),
+                  onPressed: () {},
+                ),
+                IconButton(
+                  icon: const Icon(Icons.call),
+                  onPressed: () async {
+                    // Handle camera action
+                  },
+                ),
+              ],
+            ),
         if (!_isSearching)
           if (widget.pantalla != Pantalla.Chat &&
-              widget.pantalla != Pantalla.Ajustes)
+              widget.pantalla != Pantalla.Ajustes &&
+              widget.pantalla != Pantalla.NuevoGrupo &&
+              widget.pantalla != Pantalla.Difucion)
             IconButton(
               icon: const Icon(Icons.camera_alt_outlined),
               onPressed: () async {
@@ -101,7 +115,9 @@ class _AppBarWhatsAppState extends State<AppBarWhatsApp> {
             },
           ),
         if (widget.pantalla != Pantalla.Chats &&
-            widget.pantalla != Pantalla.Ajustes)
+            widget.pantalla != Pantalla.Ajustes &&
+            widget.pantalla != Pantalla.NuevoGrupo &&
+            widget.pantalla != Pantalla.Difucion)
           PopupMenuButton(
             itemBuilder: (BuildContext context) {
               return [
@@ -126,13 +142,31 @@ class _AppBarWhatsAppState extends State<AppBarWhatsApp> {
           PopupMenuButton(
             itemBuilder: (BuildContext context) {
               return [
-                const PopupMenuItem(
+                PopupMenuItem(
                   child: Text("Nuevo grupo"),
                   value: "Nuevo grupo",
+                  onTap: () {
+                    // Al presionar un chat, navega a la otra pantalla
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => new_group(),
+                      ),
+                    );
+                  },
                 ),
-                const PopupMenuItem(
+                PopupMenuItem(
                   child: Text("Mensajes destacados"),
                   value: "Mensajes destacados",
+                  onTap: () {
+                    // Al presionar un chat, navega a la otra pantalla
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => new_broadcast(),
+                      ),
+                    );
+                  },
                 ),
                 const PopupMenuItem(
                   child: Text("Seleccionar chats"),
@@ -170,6 +204,10 @@ class _AppBarWhatsAppState extends State<AppBarWhatsApp> {
         return 'Sebastian';
       case Pantalla.Ajustes:
         return 'Settings';
+      case Pantalla.NuevoGrupo:
+        return 'Nuevo grupo';
+      case Pantalla.Difucion:
+        return 'Difucion';
       default:
         return 'WhatsApp';
     }

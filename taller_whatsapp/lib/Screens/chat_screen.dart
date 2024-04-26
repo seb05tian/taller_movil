@@ -155,7 +155,7 @@ class _ChatView extends StatelessWidget {
             image: AssetImage('assets/img/fondo.png'), fit: BoxFit.cover),
       ),
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 10),
+        padding: const EdgeInsets.symmetric(horizontal: 8),
         child: Column(
           children: [
             Expanded(
