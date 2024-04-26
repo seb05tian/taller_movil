@@ -8,7 +8,7 @@ class StarredMessages extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
-        title: Text('Starred messages'),
+        title: const Text('Starred messages'),
         leading: IconButton(
           onPressed: () {
             Navigator.pop(context);
@@ -23,15 +23,15 @@ class StarredMessages extends StatelessWidget {
         children: [
           Image(
             height: size.height * 0.15,
-            image: AssetImage('assets/img/starredmessage.png'),
+            image: const AssetImage('assets/img/starredmessage.png'),
           ),
           SizedBox(
             height: size.height * 0.04,
           ),
           Container(
             margin: EdgeInsets.symmetric(horizontal: size.width * 0.22),
-            child: Center(
-              child: Text(
+            child: const Center(
+              child: const Text(
                   'Tap and hold on any message in any chat to star it, so you can easily find it later.',textAlign: TextAlign.center,),
             ),
           )

@@ -12,16 +12,16 @@ class Ajustes_screen extends StatelessWidget {
       body: ListView(
         children: [
           Padding(
-            padding: EdgeInsets.all(16.0),
+            padding: const EdgeInsets.all(16.0),
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 CircleAvatar(
                   radius: size.height * 0.04,
-                  backgroundImage: AssetImage('assets/img/abogado.png'),
+                  backgroundImage: const AssetImage('assets/img/abogado.png'),
                 ),
-                SizedBox(width: 13),
-                Column(
+                const SizedBox(width: 13),
+                const Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
@@ -40,17 +40,17 @@ class Ajustes_screen extends StatelessWidget {
                     ),
                   ],
                 ),
-                Spacer(),
+                const Spacer(),
                 Row(
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
                     IconButton(
-                      icon: Icon(Icons.qr_code, color: Colors.green),
+                      icon: const Icon(Icons.qr_code, color: Colors.green),
                       onPressed: () {},
                     ),
                     IconButton(
                       icon:
-                          Icon(Icons.keyboard_arrow_down, color: Colors.green),
+                          const Icon(Icons.keyboard_arrow_down, color: Colors.green),
                       onPressed: () {},
                     ),
                   ],
@@ -64,9 +64,9 @@ class Ajustes_screen extends StatelessWidget {
             color: Colors.grey[300],
           ),
           ListTile(
-            leading: Icon(Icons.vpn_key),
-            title: Text('Account'),
-            subtitle: Text(
+            leading: const Icon(Icons.vpn_key),
+            title: const Text('Account'),
+            subtitle: const Text(
               'Security notifications, change number',
               style: TextStyle(
                 color: Colors.grey,
@@ -81,9 +81,9 @@ class Ajustes_screen extends StatelessWidget {
             color: Colors.grey[300],
           ),
           ListTile(
-            leading: Icon(Icons.lock),
-            title: Text('Privacy'),
-            subtitle: Text(
+            leading: const Icon(Icons.lock),
+            title: const Text('Privacy'),
+            subtitle: const Text(
               'Block contacts, temporary messages',
               style: TextStyle(
                 color: Colors.grey,
@@ -99,9 +99,9 @@ class Ajustes_screen extends StatelessWidget {
           ),
           // Rest of the settings options
           ListTile(
-            leading: Icon(Icons.face),
-            title: Text('Avatar'),
-            subtitle: Text(
+            leading: const Icon(Icons.face),
+            title: const Text('Avatar'),
+            subtitle: const Text(
               'Create, edit, manage profile picture',
               style: TextStyle(
                 color: Colors.grey,
@@ -116,9 +116,9 @@ class Ajustes_screen extends StatelessWidget {
             color: Colors.grey[300],
           ),
           ListTile(
-            leading: Icon(Icons.message),
-            title: Text('Chats'),
-            subtitle: Text(
+            leading: const Icon(Icons.message),
+            title: const Text('Chats'),
+            subtitle: const Text(
               'Theme, wallpapers, chat history',
               style: TextStyle(
                 color: Colors.grey,
@@ -133,9 +133,9 @@ class Ajustes_screen extends StatelessWidget {
             color: Colors.grey[300],
           ),
           ListTile(
-            leading: Icon(Icons.notifications),
-            title: Text('Notifications'),
-            subtitle: Text(
+            leading: const Icon(Icons.notifications),
+            title: const Text('Notifications'),
+            subtitle: const Text(
               'Message tone, groups and calls',
               style: TextStyle(
                 color: Colors.grey,
@@ -150,9 +150,9 @@ class Ajustes_screen extends StatelessWidget {
             color: Colors.grey[300],
           ),
           ListTile(
-            leading: Icon(Icons.data_usage),
-            title: Text('Storage and data'),
-            subtitle: Text(
+            leading: const Icon(Icons.data_usage),
+            title: const Text('Storage and data'),
+            subtitle: const Text(
               'Network usage, automatic download',
               style: TextStyle(
                 color: Colors.grey,
@@ -167,9 +167,9 @@ class Ajustes_screen extends StatelessWidget {
             color: Colors.grey[300],
           ),
           ListTile(
-            leading: Icon(Icons.language),
-            title: Text('App language'),
-            subtitle: Text(
+            leading: const Icon(Icons.language),
+            title: const Text('App language'),
+            subtitle: const Text(
               'Spanish (device language)',
               style: TextStyle(
                 color: Colors.grey,
@@ -184,9 +184,9 @@ class Ajustes_screen extends StatelessWidget {
             color: Colors.grey[300],
           ),
           ListTile(
-            leading: Icon(Icons.help),
-            title: Text('Help'),
-            subtitle: Text(
+            leading: const Icon(Icons.help),
+            title: const Text('Help'),
+            subtitle: const Text(
               'Help center, contact us, privacy policy',
               style: TextStyle(
                 color: Colors.grey,
@@ -201,8 +201,8 @@ class Ajustes_screen extends StatelessWidget {
             color: Colors.grey[300],
           ),
           ListTile(
-            leading: Icon(Icons.person_add),
-            title: Text('Invite friends'),
+            leading: const Icon(Icons.person_add),
+            title: const Text('Invite friends'),
             onTap: () {},
           ),
         ],

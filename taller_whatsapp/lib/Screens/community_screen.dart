@@ -44,7 +44,7 @@ class community_screen extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
 
     return Scaffold(
-      appBar: AppBarWhatsApp(pantalla: Pantalla.Comunidades),
+      appBar: const AppBarWhatsApp(pantalla: Pantalla.Comunidades),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -52,7 +52,7 @@ class community_screen extends StatelessWidget {
             onTap: () {
               print('otra comunidad');
             },
-            child: Padding(
+            child: const Padding(
               padding: EdgeInsets.all(16.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -96,9 +96,9 @@ class community_screen extends StatelessWidget {
               },
             ),
           ),
-          Padding(
+          const Padding(
             padding: EdgeInsets.symmetric(horizontal: 16.0),
-            child: Row(
+            child: const Row(
               children: [
                 Icon(Icons.announcement, color: Colors.green),
                 SizedBox(width: 8),
@@ -112,7 +112,7 @@ class community_screen extends StatelessWidget {
               ],
             ),
           ),
-          Padding(
+          const Padding(
             padding: EdgeInsets.symmetric(horizontal: 16.0),
             child: Text(
               '¡Te damos la bienvenida a tu comunidad!',
@@ -124,7 +124,7 @@ class community_screen extends StatelessWidget {
             color: Colors.grey[200],
             child: TextButton(
               onPressed: () {},
-              child: Row(
+              child: const Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Text(
