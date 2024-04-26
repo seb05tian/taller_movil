@@ -7,9 +7,9 @@ class chats_screen extends StatelessWidget {
   chats_screen({super.key});
   final List<chats> Chats = [
     chats(
-        nombre: 'Juan Pérez',
+        nombre: 'Cristiano',
         ultimoMensaje: 'Jhoan sabes que',
-        imagen: 'assets/img/abogado.png',
+        imagen: 'assets/img/cr7.jfif',
         status: const Icon(
           Icons.done_all,
           color: Colors.blue,
@@ -18,31 +18,31 @@ class chats_screen extends StatelessWidget {
     chats(
         nombre: 'Ana Sánchez',
         ultimoMensaje: 'Faltaste a ...',
-        imagen: 'assets/img/abogado.png',
+        imagen: 'assets/img/ana.png',
         status: const Icon(Icons.done_all, color: Colors.blue),
         tiempo: '9:59 AM'),
     chats(
         nombre: 'Carlos Gómez',
         ultimoMensaje: 'la Clase de Investigacion',
-        imagen: 'assets/img/abogado.png',
+        imagen: 'assets/img/antoan.jfif',
         status: const Icon(Icons.done_all, color: Colors.grey),
         tiempo: '12:08 AM'),
     chats(
         nombre: 'María Rodríguez',
         ultimoMensaje: 'como estas ?',
-        imagen: 'assets/img/abogado.png',
+        imagen: 'assets/img/maria.jpg',
         status: const Icon(Icons.done_all, color: Colors.blue),
         tiempo: '12:20 AM'),
     chats(
         nombre: 'Luis Torres',
         ultimoMensaje: 'ok',
-        imagen: 'assets/img/abogado.png',
+        imagen: 'assets/img/pana.jfif',
         status: const Icon(Icons.done_all, color: Colors.grey),
         tiempo: '12:20 AM'),
     chats(
         nombre: 'Sofía Ramírez',
         ultimoMensaje: 'mañana vamos',
-        imagen: 'assets/img/abogado.png',
+        imagen: 'assets/img/sofia.png',
         status: const Icon(Icons.done_all, color: Colors.grey),
         tiempo: 'yesterday'),
     chats(
@@ -54,13 +54,13 @@ class chats_screen extends StatelessWidget {
     chats(
         nombre: 'Ana Sánchez',
         ultimoMensaje: 'El sebas sabes',
-        imagen: 'assets/img/abogado.png',
+        imagen: 'assets/img/ana.png',
         status: const Icon(Icons.done_all, color: Colors.grey),
         tiempo: '4/22/24'),
     chats(
         nombre: 'Carlos Gómez',
         ultimoMensaje: 'si ? sigue creyendo',
-        imagen: 'assets/img/abogado.png',
+        imagen: 'assets/img/antoan.jfif',
         status: const Icon(Icons.done_all, color: Colors.grey),
         tiempo: '4/22/24'),
   ];
@@ -91,7 +91,6 @@ class chats_screen extends StatelessWidget {
             ),
             trailing: Text(Chats[index].tiempo),
             onTap: () {
-// Al presionar un chat, navega a la otra pantalla
               Navigator.push(
                 context,
                 MaterialPageRoute(
@@ -104,6 +103,12 @@ class chats_screen extends StatelessWidget {
             },
           );
         },
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        tooltip: 'Increment',
+        child: const Icon(Icons.message_rounded),
+        backgroundColor: Color(0xFF2d9962),
       ),
     );
   }

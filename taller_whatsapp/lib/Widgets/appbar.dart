@@ -1,8 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:taller_whatsapp/Screens/Ajustes_screen.dart';
-import 'package:taller_whatsapp/Screens/linked_devices.dart';
-import 'package:taller_whatsapp/Screens/starred_messages.dart';
+import 'package:taller_whatsapp/Screens/Settings_screen.dart';
 
 enum Pantalla { Chat, Chats, Novedades, Comunidades, Llamadas, Ajustes }
 
@@ -72,7 +70,7 @@ class _AppBarWhatsAppState extends State<AppBarWhatsApp> {
             children: [
               IconButton(
                 iconSize: size.height * 0.045,
-                icon: const Icon(CupertinoIcons.video_camera),
+                icon: Icon(CupertinoIcons.video_camera),
                 onPressed: () {},
               ),
               IconButton(
@@ -108,7 +106,7 @@ class _AppBarWhatsAppState extends State<AppBarWhatsApp> {
             itemBuilder: (BuildContext context) {
               return [
                 PopupMenuItem(
-                  child: const Text("Ajustes"),
+                  child: Text("Ajustes"),
                   value: "Ajustes",
                   onTap: () {
                     // Al presionar un chat, navega a la otra pantalla
@@ -136,32 +134,12 @@ class _AppBarWhatsAppState extends State<AppBarWhatsApp> {
                   child: Text("Mensajes destacados"),
                   value: "Mensajes destacados",
                 ),
-                PopupMenuItem(
-                  child: const Text("Linked devices"),
-                  value: "Linked Devices",
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const LinkedDevices(),
-                      ),
-                    );
-                  },
+                const PopupMenuItem(
+                  child: Text("Seleccionar chats"),
+                  value: "Seleccionar chats",
                 ),
                 PopupMenuItem(
-                  child: const Text("Starred messages"),
-                  value: "Starred Messages",
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const StarredMessages(),
-                      ),
-                    );
-                  },
-                ),
-                PopupMenuItem(
-                  child: const Text("Ajustes"),
+                  child: Text("Ajustes"),
                   value: "Ajustes",
                   onTap: () {
                     // Al presionar un chat, navega a la otra pantalla
@@ -183,15 +161,15 @@ class _AppBarWhatsAppState extends State<AppBarWhatsApp> {
   String _getTitle(Pantalla pantalla) {
     switch (pantalla) {
       case Pantalla.Novedades:
-        return 'Novedades';
+        return 'Updates';
       case Pantalla.Comunidades:
-        return 'Comunidades';
+        return 'Communities';
       case Pantalla.Llamadas:
-        return 'Llamadas';
+        return 'Calls';
       case Pantalla.Chat:
         return 'Sebastian';
       case Pantalla.Ajustes:
-        return 'Ajustes';
+        return 'Settings';
       default:
         return 'WhatsApp';
     }

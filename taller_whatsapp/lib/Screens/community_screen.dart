@@ -6,85 +6,42 @@ class community_screen extends StatelessWidget {
 
   final List<Status> estados = [
     Status(
-      nombre: 'Los cuervos',
-      imagen: 'assets/img/abogado.png',
+      nombre: 'Los Amigos',
+      imagen: 'assets/img/comunidad.jpg',
     ),
     Status(
-      nombre: 'Los cuervos',
-      imagen: 'assets/img/abogado.png',
+      nombre: 'Los Panas',
+      imagen: 'assets/img/comunidad1.jpg',
     ),
     Status(
-      nombre: 'Los cuervos',
-      imagen: 'assets/img/abogado.png',
+      nombre: 'Los Amigos',
+      imagen: 'assets/img/comunidad.jpg',
     ),
     Status(
-      nombre: 'Los cuervos',
-      imagen: 'assets/img/abogado.png',
+      nombre: 'Los Panas',
+      imagen: 'assets/img/comunidad1.jpg',
     ),
     Status(
-      nombre: 'Los cuervos',
-      imagen: 'assets/img/abogado.png',
+      nombre: 'Los Amigos',
+      imagen: 'assets/img/comunidad.jpg',
     ),
     Status(
-      nombre: 'Los cuervos',
-      imagen: 'assets/img/abogado.png',
+      nombre: 'Los Panas',
+      imagen: 'assets/img/comunidad1.jpg',
     ),
     Status(
-      nombre: 'Los cuervos',
-      imagen: 'assets/img/abogado.png',
+      nombre: 'Los Amigos',
+      imagen: 'assets/img/comunidad.jpg',
     ),
     Status(
-      nombre: 'Los cuervos',
-      imagen: 'assets/img/abogado.png',
+      nombre: 'Los Panas',
+      imagen: 'assets/img/comunidad1.jpg',
     ),
-    Status(
-      nombre: 'Los cuervos',
-      imagen: 'assets/img/abogado.png',
-    ),
-    Status(
-      nombre: 'Los cuervos',
-      imagen: 'assets/img/abogado.png',
-    ),
-    Status(
-      nombre: 'Los cuervos',
-      imagen: 'assets/img/abogado.png',
-    ),
-    Status(
-      nombre: 'Los cuervos',
-      imagen: 'assets/img/abogado.png',
-    ),
-    Status(
-      nombre: 'Los cuervos',
-      imagen: 'assets/img/abogado.png',
-    ),
-    Status(
-      nombre: 'Los cuervos',
-      imagen: 'assets/img/abogado.png',
-    ),
-    Status(
-      nombre: 'Los cuervos',
-      imagen: 'assets/img/abogado.png',
-    ),
-    Status(
-      nombre: 'Los cuervos',
-      imagen: 'assets/img/abogado.png',
-    ),
-    Status(
-      nombre: 'Los cuervos',
-      imagen: 'assets/img/abogado.png',
-    ),
-    Status(
-      nombre: 'Los cuervos',
-      imagen: 'assets/img/abogado.png',
-    ),
-
-    // Agrega más estados aquí si es necesario
   ];
 
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context)
-        .size; // Obteniendo las dimensiones del dispositivo
+    Size size = MediaQuery.of(context).size;
 
     return Scaffold(
       appBar: AppBarWhatsApp(pantalla: Pantalla.Comunidades),
@@ -102,13 +59,12 @@ class community_screen extends StatelessWidget {
                 children: [
                   Row(
                     children: [
-                      Icon(Icons.add_circle,
-                          color: Colors.green), // Icono de agregar en verde
+                      Icon(Icons.add_circle, color: Colors.green),
                       SizedBox(width: 8),
                       Text(
                         'Nueva comunidad',
                         style: TextStyle(
-                          color: Colors.black, // Color verde para el título
+                          color: Colors.black,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
@@ -122,16 +78,20 @@ class community_screen extends StatelessWidget {
             child: ListView.builder(
               itemCount: estados.length,
               itemBuilder: (context, index) {
-                return ListTile(
-                  leading: CircleAvatar(
-                    radius: size.height *
-                        0.03, // Utilizando el ancho de la pantalla para determinar el tamaño del avatar
-                    backgroundImage: AssetImage(estados[index].imagen),
-                  ),
-                  title: Text(estados[index].nombre),
-                  onTap: () {
-                    // Acción al hacer tap en el estado
-                  },
+                return Column(
+                  children: [
+                    ListTile(
+                      leading: CircleAvatar(
+                        radius: size.height * 0.03,
+                        backgroundImage: AssetImage(estados[index].imagen),
+                      ),
+                      title: Text(estados[index].nombre),
+                      onTap: () {},
+                    ),
+                    SizedBox(
+                      height: size.height * 0.016,
+                    )
+                  ],
                 );
               },
             ),
@@ -140,13 +100,12 @@ class community_screen extends StatelessWidget {
             padding: EdgeInsets.symmetric(horizontal: 16.0),
             child: Row(
               children: [
-                Icon(Icons.announcement,
-                    color: Colors.green), // Icono de megáfono en verde
+                Icon(Icons.announcement, color: Colors.green),
                 SizedBox(width: 8),
                 Text(
                   'Avisos',
                   style: TextStyle(
-                    color: Colors.green, // Color verde para el título de Avisos
+                    color: Colors.green,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
@@ -157,24 +116,20 @@ class community_screen extends StatelessWidget {
             padding: EdgeInsets.symmetric(horizontal: 16.0),
             child: Text(
               '¡Te damos la bienvenida a tu comunidad!',
-              style: TextStyle(
-                  color: Colors.grey), // Color gris para el texto de bienvenida
+              style: TextStyle(color: Colors.grey),
             ),
           ),
           Container(
             width: double.infinity,
-            color: Colors.grey[200], // Color de fondo gris claro
+            color: Colors.grey[200],
             child: TextButton(
-              onPressed: () {
-                // Lógica para ver todas las comunidades
-              },
+              onPressed: () {},
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Text(
                     '>     Ver todos',
-                    style: TextStyle(
-                        color: Colors.grey), // Color gris para el texto
+                    style: TextStyle(color: Colors.grey),
                   ),
                 ],
               ),
