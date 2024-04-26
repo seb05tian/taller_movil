@@ -2,7 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:taller_whatsapp/Screens/chat_screen.dart';
 import 'package:taller_whatsapp/Widgets/appbar.dart';
-
 import 'package:flutter/material.dart';
 
 class Ajustes_screen extends StatelessWidget {
@@ -178,7 +177,6 @@ class Ajustes_screen extends StatelessWidget {
               ),
             ),
             onTap: () {
-             
             },
           ),
           Divider(
