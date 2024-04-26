@@ -29,12 +29,9 @@ class MessageFieldBox extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     return Row(
       children: [
-        Container(
-          // Ajusta el tamaño del contenedo
-          width: size.width *
-              0.83, // Ancho del contenedor, aquí se ajusta al ancho máximo
-          height: size.height *
-              0.065, // Altura del contenedor, aquí se ajusta a 60 puntos
+        SizedBox(
+          width: size.width * 0.83,
+          height: size.height * 0.065,
           child: TextFormField(
             onTapOutside: (event) {
               focusNode.unfocus();
@@ -64,9 +61,7 @@ class MessageFieldBox extends StatelessWidget {
             iconSize: size.height * 0.03,
             icon: const Icon(Icons.mic),
             color: Colors.white,
-            onPressed: () async {
-              // Acción al presionar el ícono de la llamada
-            },
+            onPressed: () async {},
           ),
         )
       ],

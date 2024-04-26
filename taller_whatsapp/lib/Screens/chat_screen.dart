@@ -108,7 +108,7 @@ class Leading extends StatelessWidget {
         ),
         Container(
           padding: const EdgeInsets.only(right: 5),
-          width: size.width * 0.1, // Ajusta el tamaño del contenedor
+          width: size.width * 0.1,
           height: size.height * 0.08,
           decoration: BoxDecoration(
             shape: BoxShape.circle,
@@ -166,8 +166,6 @@ class _ChatView extends StatelessWidget {
                           ? const HerMessageBubble()
                           : const MyMessageBubble();
                     })),
-
-            /// Caja de texto de mensajes
             const MessageFieldBox(),
           ],
         ),

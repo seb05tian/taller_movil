@@ -46,7 +46,7 @@ class _ImageBubble extends StatelessWidget {
     return ClipRRect(
         borderRadius: BorderRadius.circular(20),
         child: Image.asset(
-          'assets/img/abogado.png',
+          'assets/img/mansage.jpg',
           width: size.width * 0.7,
           height: 150,
           fit: BoxFit.cover,
