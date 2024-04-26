@@ -81,7 +81,7 @@ class new_group extends StatelessWidget {
               child: Text('Contacts on WhatsApp'),
             );
           }
-          //index -= 1;
+
           return ListTile(
             leading: CircleAvatar(
               radius: size.height * 0.03,
@@ -90,11 +90,9 @@ class new_group extends StatelessWidget {
             title: Text(Chats[index].nombre),
             subtitle: Row(
               children: [
-                Chats[index].status,
                 Text(Chats[index].ultimoMensaje),
               ],
             ),
-            trailing: Text(Chats[index].tiempo),
             onTap: () {
               Navigator.push(
                 context,

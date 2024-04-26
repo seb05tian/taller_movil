@@ -93,11 +93,9 @@ class new_broadcast extends StatelessWidget {
             title: Text(Chats[index].nombre),
             subtitle: Row(
               children: [
-                Chats[index].status,
                 Text(Chats[index].ultimoMensaje),
               ],
             ),
-            trailing: Text(Chats[index].tiempo),
             onTap: () {
               Navigator.push(
                 context,
