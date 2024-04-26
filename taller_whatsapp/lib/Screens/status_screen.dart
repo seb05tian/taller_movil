@@ -111,7 +111,7 @@ class status_screen extends StatelessWidget {
                         onTap: () {
                           print('Privacidad de datos seleccionada');
                         },
-                        child: const Text('Privacidad de datos'),
+                        child: const Text('Status privacy'),
                       ),
                     ),
                   ];
@@ -183,6 +183,15 @@ class status_screen extends StatelessWidget {
             ),
           ),
         ],
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        tooltip: 'Increment',
+        child: const Icon(
+          Icons.camera_alt,
+          color: Colors.white,
+        ),
+        backgroundColor: Color(0xFF2d9962),
       ),
     );
   }

@@ -106,8 +106,8 @@ class chats_screen extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
-        tooltip: 'Increment',
-        child: const Icon(Icons.message_rounded),
+        tooltip: 'Contact',
+        child: const Icon(Icons.chat, color: Colors.white,),
         backgroundColor: Color(0xFF2d9962),
       ),
     );

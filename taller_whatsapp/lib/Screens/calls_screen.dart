@@ -208,6 +208,12 @@ class calls_screen extends StatelessWidget {
           );
         },
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        tooltip: 'new call',
+        child: const Icon(Icons.add_call, color: Colors.white,),
+        backgroundColor: Color(0xFF2d9962),
+      ),
     );
   }
 }

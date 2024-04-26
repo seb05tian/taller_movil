@@ -8,7 +8,7 @@ class Ajustes_screen extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
 
     return Scaffold(
-      appBar: const AppBarWhatsApp(pantalla: Pantalla.Ajustes),
+      appBar: const AppBarWhatsApp(pantalla: Pantalla.Settings),
       body: ListView(
         children: [
           Padding(
