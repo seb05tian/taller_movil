@@ -6,85 +6,42 @@ class community_screen extends StatelessWidget {
 
   final List<Status> estados = [
     Status(
-      nombre: 'Los cuervos',
-      imagen: 'assets/img/abogado.png',
+      nombre: 'Los Amigos',
+      imagen: 'assets/img/comunidad.jpg',
     ),
     Status(
-      nombre: 'Los cuervos',
-      imagen: 'assets/img/abogado.png',
+      nombre: 'Los Panas',
+      imagen: 'assets/img/comunidad1.jpg',
     ),
     Status(
-      nombre: 'Los cuervos',
-      imagen: 'assets/img/abogado.png',
+      nombre: 'Los Amigos',
+      imagen: 'assets/img/comunidad.jpg',
     ),
     Status(
-      nombre: 'Los cuervos',
-      imagen: 'assets/img/abogado.png',
+      nombre: 'Los Panas',
+      imagen: 'assets/img/comunidad1.jpg',
     ),
     Status(
-      nombre: 'Los cuervos',
-      imagen: 'assets/img/abogado.png',
+      nombre: 'Los Amigos',
+      imagen: 'assets/img/comunidad.jpg',
     ),
     Status(
-      nombre: 'Los cuervos',
-      imagen: 'assets/img/abogado.png',
+      nombre: 'Los Panas',
+      imagen: 'assets/img/comunidad1.jpg',
     ),
     Status(
-      nombre: 'Los cuervos',
-      imagen: 'assets/img/abogado.png',
+      nombre: 'Los Amigos',
+      imagen: 'assets/img/comunidad.jpg',
     ),
     Status(
-      nombre: 'Los cuervos',
-      imagen: 'assets/img/abogado.png',
+      nombre: 'Los Panas',
+      imagen: 'assets/img/comunidad1.jpg',
     ),
-    Status(
-      nombre: 'Los cuervos',
-      imagen: 'assets/img/abogado.png',
-    ),
-    Status(
-      nombre: 'Los cuervos',
-      imagen: 'assets/img/abogado.png',
-    ),
-    Status(
-      nombre: 'Los cuervos',
-      imagen: 'assets/img/abogado.png',
-    ),
-    Status(
-      nombre: 'Los cuervos',
-      imagen: 'assets/img/abogado.png',
-    ),
-    Status(
-      nombre: 'Los cuervos',
-      imagen: 'assets/img/abogado.png',
-    ),
-    Status(
-      nombre: 'Los cuervos',
-      imagen: 'assets/img/abogado.png',
-    ),
-    Status(
-      nombre: 'Los cuervos',
-      imagen: 'assets/img/abogado.png',
-    ),
-    Status(
-      nombre: 'Los cuervos',
-      imagen: 'assets/img/abogado.png',
-    ),
-    Status(
-      nombre: 'Los cuervos',
-      imagen: 'assets/img/abogado.png',
-    ),
-    Status(
-      nombre: 'Los cuervos',
-      imagen: 'assets/img/abogado.png',
-    ),
-
-   
   ];
 
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context)
-        .size; 
+    Size size = MediaQuery.of(context).size;
 
     return Scaffold(
       appBar: AppBarWhatsApp(pantalla: Pantalla.Comunidades),
@@ -102,13 +59,12 @@ class community_screen extends StatelessWidget {
                 children: [
                   Row(
                     children: [
-                      Icon(Icons.add_circle,
-                          color: Colors.green), 
+                      Icon(Icons.add_circle, color: Colors.green),
                       SizedBox(width: 8),
                       Text(
                         'Nueva comunidad',
                         style: TextStyle(
-                          color: Colors.black, 
+                          color: Colors.black,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
@@ -122,16 +78,20 @@ class community_screen extends StatelessWidget {
             child: ListView.builder(
               itemCount: estados.length,
               itemBuilder: (context, index) {
-                return ListTile(
-                  leading: CircleAvatar(
-                    radius: size.height *
-                        0.03, 
-                    backgroundImage: AssetImage(estados[index].imagen),
-                  ),
-                  title: Text(estados[index].nombre),
-                  onTap: () {
-                    
-                  },
+                return Column(
+                  children: [
+                    ListTile(
+                      leading: CircleAvatar(
+                        radius: size.height * 0.03,
+                        backgroundImage: AssetImage(estados[index].imagen),
+                      ),
+                      title: Text(estados[index].nombre),
+                      onTap: () {},
+                    ),
+                    SizedBox(
+                      height: size.height * 0.016,
+                    )
+                  ],
                 );
               },
             ),
@@ -140,13 +100,12 @@ class community_screen extends StatelessWidget {
             padding: EdgeInsets.symmetric(horizontal: 16.0),
             child: Row(
               children: [
-                Icon(Icons.announcement,
-                    color: Colors.green), 
+                Icon(Icons.announcement, color: Colors.green),
                 SizedBox(width: 8),
                 Text(
                   'Avisos',
                   style: TextStyle(
-                    color: Colors.green, 
+                    color: Colors.green,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
@@ -157,24 +116,20 @@ class community_screen extends StatelessWidget {
             padding: EdgeInsets.symmetric(horizontal: 16.0),
             child: Text(
               '¡Te damos la bienvenida a tu comunidad!',
-              style: TextStyle(
-                  color: Colors.grey), 
+              style: TextStyle(color: Colors.grey),
             ),
           ),
           Container(
             width: double.infinity,
-            color: Colors.grey[200], 
+            color: Colors.grey[200],
             child: TextButton(
-              onPressed: () {
-                
-              },
+              onPressed: () {},
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Text(
                     '>     Ver todos',
-                    style: TextStyle(
-                        color: Colors.grey), 
+                    style: TextStyle(color: Colors.grey),
                   ),
                 ],
               ),

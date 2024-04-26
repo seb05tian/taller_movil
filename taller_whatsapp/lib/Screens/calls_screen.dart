@@ -6,9 +6,9 @@ class calls_screen extends StatelessWidget {
   calls_screen({super.key});
   final List<calls> Calls = [
     calls(
-        nombre: 'Juan Pérez',
+        nombre: 'Cristiano',
         tiempo: 'April 20, 3:29 PM',
-        imagen: 'assets/img/abogado.png',
+        imagen: 'assets/img/cr7.jfif',
         status: const Icon(
           Icons.call_made,
           color: Color(
@@ -19,7 +19,7 @@ class calls_screen extends StatelessWidget {
     calls(
         nombre: 'Ana Sánchez',
         tiempo: 'April 21, 10:15 AM',
-        imagen: 'assets/img/abogado.png',
+        imagen: 'assets/img/ana.png',
         status: const Icon(
           Icons.call_received,
           color: Color(0xffc9103d),
@@ -28,7 +28,7 @@ class calls_screen extends StatelessWidget {
     calls(
         nombre: 'Carlos Gómez',
         tiempo: 'April 22, 2:45 PM',
-        imagen: 'assets/img/abogado.png',
+        imagen: 'assets/img/antoan.jfif',
         status: const Icon(
           Icons.call_made,
           color: Color(0xff1dab61),
@@ -37,7 +37,7 @@ class calls_screen extends StatelessWidget {
     calls(
         nombre: 'María Rodríguez',
         tiempo: 'April 23, 1:30 PM',
-        imagen: 'assets/img/abogado.png',
+        imagen: 'assets/img/maria.jpg',
         status: const Icon(
           Icons.call_received,
           color: Color(0xffc9103d),
@@ -46,7 +46,7 @@ class calls_screen extends StatelessWidget {
     calls(
         nombre: 'Luis Torres',
         tiempo: 'April 24, 4:20 PM',
-        imagen: 'assets/img/abogado.png',
+        imagen: 'assets/img/pana.jfif',
         status: const Icon(
           Icons.call_received,
           color: Color(0xffc9103d),
@@ -55,7 +55,7 @@ class calls_screen extends StatelessWidget {
     calls(
         nombre: 'Sofía Ramírez',
         tiempo: 'April 25, 9:00 AM',
-        imagen: 'assets/img/abogado.png',
+        imagen: 'assets/img/sofia.png',
         status: const Icon(
           Icons.call_made,
           color: Color(0xff1dab61),
@@ -71,23 +71,70 @@ class calls_screen extends StatelessWidget {
         ),
         calltype: Icons.call_outlined),
     calls(
+        nombre: 'Cristiano',
+        tiempo: 'April 20, 3:29 PM',
+        imagen: 'assets/img/cr7.jfif',
+        status: const Icon(
+          Icons.call_made,
+          color: Color(
+            0xff1dab61,
+          ),
+        ),
+        calltype: CupertinoIcons.video_camera),
+    calls(
         nombre: 'Ana Sánchez',
         tiempo: 'April 21, 10:15 AM',
-        imagen: 'assets/img/abogado.png',
+        imagen: 'assets/img/ana.png',
+        status: const Icon(
+          Icons.call_received,
+          color: Color(0xffc9103d),
+        ),
+        calltype: Icons.call_outlined),
+    calls(
+        nombre: 'Carlos Gómez',
+        tiempo: 'April 22, 2:45 PM',
+        imagen: 'assets/img/antoan.jfif',
         status: const Icon(
           Icons.call_made,
           color: Color(0xff1dab61),
         ),
         calltype: Icons.call_outlined),
     calls(
-        nombre: 'Carlos Gómez',
-        tiempo: 'April 22, 2:45 PM',
-        imagen: 'assets/img/abogado.png',
+        nombre: 'María Rodríguez',
+        tiempo: 'April 23, 1:30 PM',
+        imagen: 'assets/img/maria.jpg',
+        status: const Icon(
+          Icons.call_received,
+          color: Color(0xffc9103d),
+        ),
+        calltype: Icons.call_outlined),
+    calls(
+        nombre: 'Luis Torres',
+        tiempo: 'April 24, 4:20 PM',
+        imagen: 'assets/img/pana.jfif',
+        status: const Icon(
+          Icons.call_received,
+          color: Color(0xffc9103d),
+        ),
+        calltype: CupertinoIcons.video_camera),
+    calls(
+        nombre: 'Sofía Ramírez',
+        tiempo: 'April 25, 9:00 AM',
+        imagen: 'assets/img/sofia.png',
         status: const Icon(
           Icons.call_made,
           color: Color(0xff1dab61),
         ),
         calltype: CupertinoIcons.video_camera),
+    calls(
+        nombre: 'Pedro Martínez',
+        tiempo: 'April 26, 11:30 AM',
+        imagen: 'assets/img/abogado.png',
+        status: const Icon(
+          Icons.call_made,
+          color: Color(0xff1dab61),
+        ),
+        calltype: Icons.call_outlined),
   ];
 
   @override

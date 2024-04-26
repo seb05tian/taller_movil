@@ -5,139 +5,85 @@ class status_screen extends StatelessWidget {
   status_screen({super.key});
   final List<status> estados = [
     status(
-      nombre: 'Juan Pérez',
+      nombre: 'Cristiano',
+      tiempo: 'hace 30 minutos',
+      imagen: 'assets/img/cr7.jfif',
+      contenido: 'Trabajando duro en mi caso legal.',
+    ),
+    status(
+      nombre: 'Ana Sánchez',
+      tiempo: 'hace 30 minutos',
+      imagen: 'assets/img/ana.png',
+      contenido: 'Trabajando duro en mi caso legal.',
+    ),
+    status(
+      nombre: 'Carlos Gomez',
+      tiempo: 'hace 30 minutos',
+      imagen: 'assets/img/antoan.jfif',
+      contenido: 'Trabajando duro en mi caso legal.',
+    ),
+    status(
+      nombre: 'Maria Rodriguez',
+      tiempo: 'hace 30 minutos',
+      imagen: 'assets/img/maria.jpg',
+      contenido: 'Trabajando duro en mi caso legal.',
+    ),
+    status(
+      nombre: 'luis Torres',
+      tiempo: 'hace 30 minutos',
+      imagen: 'assets/img/pana.jfif',
+      contenido: 'Trabajando duro en mi caso legal.',
+    ),
+    status(
+      nombre: 'Sofia Ramirez',
+      tiempo: 'hace 30 minutos',
+      imagen: 'assets/img/sofia.png',
+      contenido: 'Trabajando duro en mi caso legal.',
+    ),
+    status(
+      nombre: 'Pedro Martinez',
       tiempo: 'hace 30 minutos',
       imagen: 'assets/img/abogado.png',
       contenido: 'Trabajando duro en mi caso legal.',
     ),
     status(
-      nombre: 'Juan Pérez',
+      nombre: 'Cristiano',
       tiempo: 'hace 30 minutos',
-      imagen: 'assets/img/abogado.png',
+      imagen: 'assets/img/cr7.jfif',
       contenido: 'Trabajando duro en mi caso legal.',
     ),
     status(
-      nombre: 'Juan Pérez',
+      nombre: 'Ana Sánchez',
       tiempo: 'hace 30 minutos',
-      imagen: 'assets/img/abogado.png',
+      imagen: 'assets/img/ana.png',
       contenido: 'Trabajando duro en mi caso legal.',
     ),
     status(
-      nombre: 'Juan Pérez',
+      nombre: 'Carlos Gomez',
       tiempo: 'hace 30 minutos',
-      imagen: 'assets/img/abogado.png',
+      imagen: 'assets/img/antoan.jfif',
       contenido: 'Trabajando duro en mi caso legal.',
     ),
     status(
-      nombre: 'Juan Pérez',
+      nombre: 'Maria Rodriguez',
       tiempo: 'hace 30 minutos',
-      imagen: 'assets/img/abogado.png',
+      imagen: 'assets/img/maria.jpg',
       contenido: 'Trabajando duro en mi caso legal.',
     ),
     status(
-      nombre: 'Juan Pérez',
+      nombre: 'luis Torres',
       tiempo: 'hace 30 minutos',
-      imagen: 'assets/img/abogado.png',
+      imagen: 'assets/img/pana.jfif',
       contenido: 'Trabajando duro en mi caso legal.',
     ),
     status(
-      nombre: 'Juan Pérez',
+      nombre: 'Sofia Ramirez',
       tiempo: 'hace 30 minutos',
-      imagen: 'assets/img/abogado.png',
+      imagen: 'assets/img/sofia.png',
       contenido: 'Trabajando duro en mi caso legal.',
     ),
     status(
-      nombre: 'Juan Pérez',
-      tiempo: 'hace 30 minutos',
-      imagen: 'assets/img/abogado.png',
-      contenido: 'Trabajando duro en mi caso legal.',
-    ),
-    status(
-      nombre: 'Juan Pérez',
-      tiempo: 'hace 30 minutos',
-      imagen: 'assets/img/abogado.png',
-      contenido: 'Trabajando duro en mi caso legal.',
-    ),
-    status(
-      nombre: 'Juan Pérez',
-      tiempo: 'hace 30 minutos',
-      imagen: 'assets/img/abogado.png',
-      contenido: 'Trabajando duro en mi caso legal.',
-    ),
-    status(
-      nombre: 'Juan Pérez',
-      tiempo: 'hace 30 minutos',
-      imagen: 'assets/img/abogado.png',
-      contenido: 'Trabajando duro en mi caso legal.',
-    ),
-    status(
-      nombre: 'Juan Pérez',
-      tiempo: 'hace 30 minutos',
-      imagen: 'assets/img/abogado.png',
-      contenido: 'Trabajando duro en mi caso legal.',
-    ),
-    status(
-      nombre: 'Juan Pérez',
-      tiempo: 'hace 30 minutos',
-      imagen: 'assets/img/abogado.png',
-      contenido: 'Trabajando duro en mi caso legal.',
-    ),
-    status(
-      nombre: 'Juan Pérez',
-      tiempo: 'hace 30 minutos',
-      imagen: 'assets/img/abogado.png',
-      contenido: 'Trabajando duro en mi caso legal.',
-    ),
-    status(
-      nombre: 'Juan Pérez',
-      tiempo: 'hace 30 minutos',
-      imagen: 'assets/img/abogado.png',
-      contenido: 'Trabajando duro en mi caso legal.',
-    ),
-    status(
-      nombre: 'Juan Pérez',
-      tiempo: 'hace 30 minutos',
-      imagen: 'assets/img/abogado.png',
-      contenido: 'Trabajando duro en mi caso legal.',
-    ),
-    status(
-      nombre: 'Juan Pérez',
-      tiempo: 'hace 30 minutos',
-      imagen: 'assets/img/abogado.png',
-      contenido: 'Trabajando duro en mi caso legal.',
-    ),
-    status(
-      nombre: 'Juan Pérez',
-      tiempo: 'hace 30 minutos',
-      imagen: 'assets/img/abogado.png',
-      contenido: 'Trabajando duro en mi caso legal.',
-    ),
-    status(
-      nombre: 'Juan Pérez',
-      tiempo: 'hace 30 minutos',
-      imagen: 'assets/img/abogado.png',
-      contenido: 'Trabajando duro en mi caso legal.',
-    ),
-    status(
-      nombre: 'Juan Pérez',
-      tiempo: 'hace 30 minutos',
-      imagen: 'assets/img/abogado.png',
-      contenido: 'Trabajando duro en mi caso legal.',
-    ),
-    status(
-      nombre: 'Juan Pérez',
-      tiempo: 'hace 30 minutos',
-      imagen: 'assets/img/abogado.png',
-      contenido: 'Trabajando duro en mi caso legal.',
-    ),
-    status(
-      nombre: 'Juan Pérez',
-      tiempo: 'hace 30 minutos',
-      imagen: 'assets/img/abogado.png',
-      contenido: 'Trabajando duro en mi caso legal.',
-    ),
-    status(
-      nombre: 'Juan Pérez',
+      nombre: 'Pedro Martinez',
       tiempo: 'hace 30 minutos',
       imagen: 'assets/img/abogado.png',
       contenido: 'Trabajando duro en mi caso legal.',
@@ -154,9 +100,7 @@ class status_screen extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           AppBar(
-            title: const Text('Status',
-                style: TextStyle(
-                    color: Colors.black)), 
+            title: const Text('Status', style: TextStyle(color: Colors.black)),
             backgroundColor: Colors.white,
             actions: [
               PopupMenuButton(
@@ -186,13 +130,12 @@ class status_screen extends StatelessWidget {
                 children: [
                   Row(
                     children: [
-                      Icon(Icons.add_circle,
-                          color: Colors.green),
+                      Icon(Icons.add_circle, color: Colors.green),
                       SizedBox(width: 8),
                       Text(
                         'Mi estado',
                         style: TextStyle(
-                          color: Colors.black, 
+                          color: Colors.black,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
@@ -201,14 +144,11 @@ class status_screen extends StatelessWidget {
                   SizedBox(height: 4),
                   Row(
                     children: [
-                      SizedBox(
-                          width:
-                              32), 
+                      SizedBox(width: 32),
                       Text(
                         'Añade una actualización',
                         style: TextStyle(
-                          color:
-                              Colors.grey, 
+                          color: Colors.grey,
                         ),
                       ),
                     ],
@@ -223,15 +163,12 @@ class status_screen extends StatelessWidget {
               itemBuilder: (context, index) {
                 return ListTile(
                   leading: CircleAvatar(
-                    radius: size.height *
-                        0.03, 
+                    radius: size.height * 0.03,
                     backgroundImage: AssetImage(estados[index].imagen),
                   ),
                   title: Text(estados[index].nombre),
                   subtitle: Text(estados[index].tiempo),
-                  onTap: () {
-                  
-                  },
+                  onTap: () {},
                 );
               },
             ),
