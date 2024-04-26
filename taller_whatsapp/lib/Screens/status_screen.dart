@@ -184,7 +184,14 @@ class status_screen extends StatelessWidget {
           ),
         ],
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        tooltip: 'Increment',
+        child: const Icon(Icons.camera_alt, color: Colors.white,),
+        backgroundColor: Color(0xFF2d9962),
+      ),
     );
+    
   }
 }
 

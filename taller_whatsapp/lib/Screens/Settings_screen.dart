@@ -1,10 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:taller_whatsapp/Widgets/appbar.dart';
-<<<<<<< HEAD:taller_whatsapp/lib/Screens/Ajustes_screen.dart
-import 'package:flutter/material.dart';
-=======
->>>>>>> 59aeaf4832467ef25798fec5d77029943b2a8b87:taller_whatsapp/lib/Screens/Settings_screen.dart
 
 class Ajustes_screen extends StatelessWidget {
   @override
@@ -163,12 +159,7 @@ class Ajustes_screen extends StatelessWidget {
                 fontSize: 12,
               ),
             ),
-<<<<<<< HEAD:taller_whatsapp/lib/Screens/Ajustes_screen.dart
-            onTap: () {
-            },
-=======
             onTap: () {},
->>>>>>> 59aeaf4832467ef25798fec5d77029943b2a8b87:taller_whatsapp/lib/Screens/Settings_screen.dart
           ),
           Divider(
             height: 0,
