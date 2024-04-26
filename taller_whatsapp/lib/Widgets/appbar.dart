@@ -170,10 +170,6 @@ class _AppBarWhatsAppState extends State<AppBarWhatsApp> {
                     );
                   },
                 ),
-                const PopupMenuItem(
-                  child: Text("Linked devices"),
-                  value: "Linked devices",
-                ),
                 PopupMenuItem(
                   child: const Text("Linked devices"),
                   value: "Linked devices",
