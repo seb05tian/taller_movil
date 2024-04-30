@@ -130,7 +130,7 @@ class _GenReportState extends State<GenReport> {
                               child: Container(
                                 alignment: Alignment.center,
                                 margin: EdgeInsets.symmetric(
-                                    horizontal: size.width * 0.03),
+                                    horizontal: size.width * 0.025),
                                 color: Colors.white,
                                 child: Text(
                                   'Material',
@@ -229,7 +229,7 @@ class _GenReportState extends State<GenReport> {
                                   child: Container(
                                     alignment: Alignment.center,
                                     margin: EdgeInsets.symmetric(
-                                        horizontal: size.width * 0.03),
+                                        horizontal: size.width * 0.015),
                                     color: Colors.white,
                                     child: Text(
                                       'Cantidad',
@@ -264,7 +264,10 @@ class _GenReportState extends State<GenReport> {
                                       borderRadius: const BorderRadius.all(
                                           Radius.circular(20)),
                                     ),
-                                    child: TextField()),
+                                    child: TextField(
+                                      decoration: InputDecoration(
+                                          border: InputBorder.none),
+                                    )),
                                 Positioned(
                                   left: size.width * 0.01,
                                   bottom: size.height * 0.04,
@@ -273,7 +276,7 @@ class _GenReportState extends State<GenReport> {
                                   child: Container(
                                     alignment: Alignment.center,
                                     margin: EdgeInsets.symmetric(
-                                        horizontal: size.width * 0.03),
+                                        horizontal: size.width * 0.05),
                                     color: Colors.white,
                                     child: Text(
                                       'Precio',
