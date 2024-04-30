@@ -21,6 +21,12 @@ class _GenReportState extends State<DetallesScreen> {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.only(
+            bottomLeft: Radius.circular(20),
+            bottomRight: Radius.circular(20),
+          ),
+        ),
         backgroundColor: const Color(0xff1D8D36),
         elevation: 0,
         leading: IconButton(
@@ -40,12 +46,6 @@ class _GenReportState extends State<DetallesScreen> {
               fontSize: ((size.width + size.height) / 2) * 0.035),
         ),
         centerTitle: true,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.only(
-            bottomLeft: Radius.circular(10),
-            bottomRight: Radius.circular(10),
-          ),
-        ),
       ),
       body: Container(
         alignment: Alignment.center,

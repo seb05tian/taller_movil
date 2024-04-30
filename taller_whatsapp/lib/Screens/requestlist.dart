@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:taller_whatsapp/Screens/detallesSolicitud.dart';
 
 class RequestList extends StatelessWidget {
   const RequestList({super.key});
@@ -58,7 +59,12 @@ class RequestList extends StatelessWidget {
                         EdgeInsets.symmetric(horizontal: size.width * 0.015),
                     child: InkWell(
                       onTap: () {
-                        print('aca abre los detallesxd');
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const DetallesScreen(),
+                          ),
+                        );
                       },
                       child: Container(
                         padding: EdgeInsets.all(size.width * 0.03),
