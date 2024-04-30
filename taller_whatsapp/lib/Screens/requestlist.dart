@@ -19,37 +19,44 @@ class RequestList extends StatelessWidget {
         ),
       ),
       body: Container(
-        child: Column(
-          children: [
-            Container(
-              padding: EdgeInsets.symmetric(horizontal: size.width * 0.05),
-              margin: EdgeInsets.symmetric(vertical: size.width * 0.15),
-              child: Text(
-                'Lista de solicitudes',
-                style: TextStyle(
-                  fontFamily: 'msbold',
-                  color: Color(0xff1D8D36),
-                  fontSize: size.height * 0.02,
-                ),
-              ),
-            ),
-            SliverList(
-              delegate: SliverChildBuilderDelegate(
-                (BuildContext context, int index) {
-                  if (solicitudeexist == false) {
-                    return Container(
-                      height: size.height * 0.39,
-                      alignment: Alignment.center,
-                      child: Text(
-                        'No hay reportes para mostrar',
-                        style: TextStyle(
-                            fontFamily: 'mmedium',
-                            color: Colors.black,
-                            fontSize: size.height * 0.03),
+          child: ListView.builder(
+              itemCount: solicitudeexist == false ? 7 : 2,
+              itemBuilder: (context, index) {
+                if (index == 0) {
+                  return Container(
+                    margin: EdgeInsets.symmetric(horizontal: size.width * 0.05),
+                    alignment: Alignment.centerLeft,
+                    decoration: const BoxDecoration(
+                      color: Colors.white,
+                    ),
+                    height: size.height * 0.15,
+                    child: Text(
+                      'Historial de solicitudes',
+                      style: TextStyle(
+                        fontFamily: 'msbold',
+                        color: Color(0xff1D8D36),
+                        fontSize: size.height * 0.025,
                       ),
-                    );
-                  } else {
-                    return InkWell(
+                    ),
+                  );
+                }
+                if (solicitudeexist == true) {
+                  return Container(
+                    height: size.height * 0.39,
+                    alignment: Alignment.center,
+                    child: Text(
+                      'No hay solicitudes para mostrar',
+                      style: TextStyle(
+                          fontFamily: 'mmedium',
+                          color: Colors.black,
+                          fontSize: size.height * 0.03),
+                    ),
+                  );
+                } else {
+                  return Padding(
+                    padding:
+                        EdgeInsets.symmetric(horizontal: size.width * 0.015),
+                    child: InkWell(
                       onTap: () {
                         print('aca abre los detallesxd');
                       },
@@ -77,10 +84,10 @@ class RequestList extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              'Reporte 0${index + 1}',
+                              'Solicitud 0${index}',
                               style: TextStyle(
                                 fontFamily: 'mmedium',
-                                color: const Color(0xff2D148F),
+                                color: const Color(0xff1D8D36),
                                 fontSize: size.height * 0.02,
                               ),
                             ),
@@ -91,10 +98,10 @@ class RequestList extends StatelessWidget {
                               mainAxisAlignment: MainAxisAlignment.start,
                               children: [
                                 Text(
-                                  'xdddd',
+                                  'Plastico',
                                   style: TextStyle(
                                     fontFamily: 'mlight',
-                                    color: const Color(0xff2D148F),
+                                    color: const Color(0xff676565),
                                     fontSize: size.height * 0.02,
                                   ),
                                 ),
@@ -102,8 +109,8 @@ class RequestList extends StatelessWidget {
                                   width: size.width * 0.05,
                                 ),
                                 Icon(
-                                  Icons.date_range_rounded,
-                                  color: const Color(0xff2D148F),
+                                  Icons.recycling,
+                                  color: const Color(0xff1D8D36),
                                   size: size.height * 0.033,
                                 )
                               ],
@@ -111,15 +118,10 @@ class RequestList extends StatelessWidget {
                           ],
                         ),
                       ),
-                    );
-                  }
-                },
-                childCount: 7,
-              ),
-            ),
-          ],
-        ),
-      ),
+                    ),
+                  );
+                }
+              })),
     );
   }
 }

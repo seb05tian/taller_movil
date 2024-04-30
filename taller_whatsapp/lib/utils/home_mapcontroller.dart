@@ -16,7 +16,7 @@ class Home_mapcontroller {
         CameraUpdate.newCameraPosition(
           CameraPosition(
             target: myPosition,
-            zoom: 13.0,
+            zoom: 20.0,
           ),
         ),
       );

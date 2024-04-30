@@ -61,18 +61,13 @@ class _bottomnavbarState extends State<bottomnavbar> {
                     color: Colors.black,
                   ),
                 ),
-                activeIcon: Container(
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20),
-                      color: const Color(0xffd8fdd2)),
-                  child: Padding(
-                    padding: EdgeInsets.symmetric(
-                        vertical: size.height * 0.005,
-                        horizontal: size.width * 0.045),
-                    child: const Icon(
-                      Icons.map,
-                      color: Color(0xff116144),
-                    ),
+                activeIcon: Padding(
+                  padding: EdgeInsets.symmetric(
+                      vertical: size.height * 0.005,
+                      horizontal: size.width * 0.045),
+                  child: const Icon(
+                    Icons.map,
+                    color: Color(0xff116144),
                   ),
                 ),
                 label: 'Mapa',
@@ -85,19 +80,14 @@ class _bottomnavbarState extends State<bottomnavbar> {
                     color: Colors.black,
                   ),
                 ),
-                activeIcon: Container(
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20),
-                      color: const Color(0xffd8fdd2)),
-                  child: Padding(
-                    padding: EdgeInsets.symmetric(
-                        vertical: size.height * 0.005,
-                        horizontal: size.width * 0.045),
-                    child: const Icon(Icons.add_to_photos,
-                        color: Color(0xff116144)),
-                  ),
+                activeIcon: Padding(
+                  padding: EdgeInsets.symmetric(
+                      vertical: size.height * 0.005,
+                      horizontal: size.width * 0.045),
+                  child:
+                      const Icon(Icons.add_to_photos, color: Color(0xff116144)),
                 ),
-                label: 'Generar solicitud',
+                label: 'Generar',
               ),
               BottomNavigationBarItem(
                 icon: Padding(
@@ -107,19 +97,13 @@ class _bottomnavbarState extends State<bottomnavbar> {
                     color: Colors.black,
                   ),
                 ),
-                activeIcon: Container(
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20),
-                      color: const Color(0xffd8fdd2)),
-                  child: Padding(
-                    padding: EdgeInsets.symmetric(
-                        vertical: size.height * 0.005,
-                        horizontal: size.width * 0.045),
-                    child:
-                        const Icon(Icons.view_list, color: Color(0xff116144)),
-                  ),
+                activeIcon: Padding(
+                  padding: EdgeInsets.symmetric(
+                      vertical: size.height * 0.005,
+                      horizontal: size.width * 0.045),
+                  child: const Icon(Icons.view_list, color: Color(0xff116144)),
                 ),
-                label: 'Lista de solicitudes',
+                label: 'Solicitudes',
               ),
             ],
           ),
