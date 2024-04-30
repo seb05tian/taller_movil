@@ -33,22 +33,11 @@ class _RegScreenState extends State<RegScreen> {
         physics: const NeverScrollableScrollPhysics(),
         child: Column(
           children: [
-            Row(
-              children: [
-                Container(
-                  width: size.width * 0.8,
-                  height: size.height * 0.28,
-                  decoration: const BoxDecoration(
-                    color: Color(0xff1D8D36),
-                    borderRadius:
-                        BorderRadius.only(bottomRight: Radius.circular(400)),
-                  ),
-                ),
-              ],
-            ),
-            SizedBox(height: size.height * 0.05),
             Container(
-              margin: EdgeInsets.only(top: size.height * 0.05),
+              width: size.width * 1,
+              child: Image.asset('assets/img/XD.png'),
+            ),
+            Container(
               alignment: Alignment.center,
               child: Text(
                 "Registrarse",
@@ -147,6 +136,38 @@ class _RegScreenState extends State<RegScreen> {
                     backgroundColor: const Color(0xff1D8D36),
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(30))),
+              ),
+            ),
+            Container(
+              padding: EdgeInsets.only(top: size.height * 0.04),
+              child: TextButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (contxt) =>
+                            const LoginScreen()), // Nombre de la siguiente ruta
+                  );
+                },
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      "¿Ya tienes cuenta? ",
+                      style: TextStyle(
+                          fontSize: ((size.width + size.height) / 2) * 0.025,
+                          color: const Color(0xff1D8D36),
+                          fontFamily: "mregular"),
+                    ),
+                    Text(
+                      "Inicia Sesion",
+                      style: TextStyle(
+                          fontSize: ((size.width + size.height) / 2) * 0.025,
+                          color: const Color(0xff1D8D36),
+                          fontFamily: "msbold"),
+                    ),
+                  ],
+                ),
               ),
             ),
           ],
