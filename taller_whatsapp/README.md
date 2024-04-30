@@ -14,3 +14,10 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+
+cambiar nombre al package
+//flutter pub run change_app_package_name:main com.new.package.name
+cambiar icono con las configs del yaml
+//flutter pub run flutter_launcher_icons
+cambiar splash screen con los configs del yaml
+//dart run flutter_native_splash:create
