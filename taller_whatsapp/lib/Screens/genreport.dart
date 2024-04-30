@@ -286,7 +286,7 @@ class _GenReportState extends State<GenReport> {
                             ),
                           ],
                         ),
-                        Text('prexio sugerido:'),
+                        Text('precio sugerido:'),
                         ElevatedButton(
                           onPressed: () {},
                           style: ElevatedButton.styleFrom(
