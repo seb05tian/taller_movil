@@ -83,7 +83,11 @@ class _GenReportState extends State<DetallesScreen> {
                       children: [
                         Text(
                           'Solicitudes 01',
-                          style: TextStyle(fontSize: 20, color: Colors.green),
+                          style: TextStyle(
+                            fontSize: ((size.width + size.height) / 2) * 0.03,
+                            fontFamily: "mregular",
+                            color: Colors.green,
+                          ),
                         ),
                       ],
                     ),
@@ -105,7 +109,11 @@ class _GenReportState extends State<DetallesScreen> {
                         ),
                         Text(
                           'Material',
-                          style: TextStyle(fontSize: 20, color: Colors.green),
+                          style: TextStyle(
+                            fontSize: ((size.width + size.height) / 2) * 0.03,
+                            fontFamily: "mregular",
+                            color: Colors.green,
+                          ),
                         )
                       ],
                     ),
@@ -127,7 +135,11 @@ class _GenReportState extends State<DetallesScreen> {
                         ),
                         Text(
                           '5',
-                          style: TextStyle(fontSize: 20, color: Colors.green),
+                          style: TextStyle(
+                            fontSize: ((size.width + size.height) / 2) * 0.03,
+                            fontFamily: "mregular",
+                            color: Colors.green,
+                          ),
                         )
                       ],
                     ),
@@ -149,7 +161,11 @@ class _GenReportState extends State<DetallesScreen> {
                         ),
                         Text(
                           '50.000',
-                          style: TextStyle(fontSize: 20, color: Colors.green),
+                          style: TextStyle(
+                            fontSize: ((size.width + size.height) / 2) * 0.03,
+                            fontFamily: "mregular",
+                            color: Colors.green,
+                          ),
                         )
                       ],
                     ),
@@ -161,7 +177,11 @@ class _GenReportState extends State<DetallesScreen> {
                     height: size.height * 0.05,
                     child: Text(
                       'Precio sugerido : 30.000',
-                      style: TextStyle(fontSize: 20, color: Colors.green),
+                      style: TextStyle(
+                        fontSize: ((size.width + size.height) / 2) * 0.03,
+                        fontFamily: "mregular",
+                        color: Colors.green,
+                      ),
                     ),
                   ),
                   SizedBox(
@@ -170,7 +190,9 @@ class _GenReportState extends State<DetallesScreen> {
                   Container(
                     height: size.height * 0.05,
                     child: ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.of(context).pop();
+                        },
                         style: ElevatedButton.styleFrom(
                           backgroundColor:
                               Colors.green, // Color del botón "Registrarse"
@@ -180,7 +202,11 @@ class _GenReportState extends State<DetallesScreen> {
                         ),
                         child: Text(
                           'Volver',
-                          style: TextStyle(color: Colors.white),
+                          style: TextStyle(
+                            fontSize: ((size.width + size.height) / 2) * 0.03,
+                            fontFamily: "mregular",
+                            color: Colors.white,
+                          ),
                         )),
                   )
                 ],
