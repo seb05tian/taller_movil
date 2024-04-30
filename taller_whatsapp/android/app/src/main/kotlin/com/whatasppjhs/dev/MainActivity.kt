@@ -1,4 +1,4 @@
-package whatsappcom.taller_whatsapp
+package com.whatasppjhs.dev
 
 import io.flutter.embedding.android.FlutterActivity
 

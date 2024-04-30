@@ -1,6 +1,8 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:taller_whatsapp/Screens/chat_screen.dart';
+import 'package:taller_whatsapp/Screens/login.dart';
 import 'package:taller_whatsapp/Widgets/appbar.dart';
 
 class chats_screen extends StatelessWidget {
@@ -105,9 +107,20 @@ class chats_screen extends StatelessWidget {
         },
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          FirebaseAuth.instance.signOut();
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => const LoginScreen(),
+            ),
+          );
+        },
         tooltip: 'Contact',
-        child: const Icon(Icons.chat, color: Colors.white,),
+        child: const Icon(
+          Icons.chat,
+          color: Colors.white,
+        ),
         backgroundColor: Color(0xFF2d9962),
       ),
     );

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "517859331147",
+    "project_id": "whatsapp-jhs",
+    "storage_bucket": "whatsapp-jhs.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:517859331147:android:0fa5e887b788f9160a51ce",
+        "android_client_info": {
+          "package_name": "com.whatasppjhs.dev"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDEXlV057upi_0rXQp8ahYLmghmrw_Cw1U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
