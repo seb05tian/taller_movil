@@ -252,7 +252,8 @@ class _GenReportState extends State<GenReport> {
                                 Container(
                                     alignment: Alignment.centerLeft,
                                     padding: EdgeInsets.only(
-                                        left: size.width * 0.04),
+                                        left: size.width * 0.04,
+                                        bottom: size.width * 0.04),
                                     margin: EdgeInsets.only(
                                         top: size.height * 0.005),
                                     width: size.width * 0.55,
@@ -289,7 +290,24 @@ class _GenReportState extends State<GenReport> {
                               ],
                             ),
                           ],
-                        )
+                        ),
+                        Text('prexio sugerido:'),
+                        ElevatedButton(
+                          onPressed: () {},
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor:
+                                Colors.green, // Color del botón "Registrarse"
+                            textStyle: const TextStyle(
+                                color: Colors.white), // Color del texto
+                            padding: const EdgeInsets.symmetric(
+                                vertical: 15,
+                                horizontal: 30), // Espaciado interno del botón
+                          ),
+                          child: const Text(
+                            'Generar',
+                            style: TextStyle(color: Colors.white),
+                          ),
+                        ),
                       ],
                     ),
                   )
