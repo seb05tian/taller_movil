@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:taller_whatsapp/Screens/calls_screen.dart';
-import 'package:taller_whatsapp/Screens/chats_screen.dart';
-import 'package:taller_whatsapp/Screens/status_screen.dart';
-import 'package:taller_whatsapp/Screens/community_screen.dart';
+import 'package:taller_whatsapp/Screens/genreport.dart';
+import 'package:taller_whatsapp/Screens/homepage.dart';
+import 'package:taller_whatsapp/Screens/login.dart';
 
 class bottomnavbar extends StatefulWidget {
   const bottomnavbar({super.key});
@@ -15,10 +14,9 @@ class _bottomnavbarState extends State<bottomnavbar> {
   int _selectedIndex = 0;
   //aca colocan los widgets de las pantallas que vayan haciendo, en el orden que van, chat, updates, communities, calls
   final List<Widget> _pages = <Widget>[
-    chats_screen(),
-    status_screen(),
-    community_screen(),
-    calls_screen(),
+    HomePageMap(),
+    GenReport(),
+    Icon(Icons.view_list)
   ];
   void _onItemTapped(int index) {
     setState(() {
@@ -29,7 +27,7 @@ class _bottomnavbarState extends State<bottomnavbar> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    print("INDEX: $_selectedIndex");
+
     return Scaffold(
         body: IndexedStack(index: _selectedIndex, children: _pages),
         bottomNavigationBar: Theme(
@@ -58,7 +56,7 @@ class _bottomnavbarState extends State<bottomnavbar> {
                 icon: Padding(
                   padding: EdgeInsets.symmetric(vertical: size.height * 0.005),
                   child: const Icon(
-                    Icons.chat_outlined,
+                    Icons.map_outlined,
                     color: Colors.black,
                   ),
                 ),
@@ -71,18 +69,18 @@ class _bottomnavbarState extends State<bottomnavbar> {
                         vertical: size.height * 0.005,
                         horizontal: size.width * 0.045),
                     child: const Icon(
-                      Icons.chat_rounded,
+                      Icons.map,
                       color: Color(0xff116144),
                     ),
                   ),
                 ),
-                label: 'Chats',
+                label: 'Mapa',
               ),
               BottomNavigationBarItem(
                 icon: Padding(
                   padding: EdgeInsets.symmetric(vertical: size.height * 0.005),
                   child: const Icon(
-                    Icons.tips_and_updates_outlined,
+                    Icons.add_to_photos_outlined,
                     color: Colors.black,
                   ),
                 ),
@@ -94,17 +92,17 @@ class _bottomnavbarState extends State<bottomnavbar> {
                     padding: EdgeInsets.symmetric(
                         vertical: size.height * 0.005,
                         horizontal: size.width * 0.045),
-                    child: const Icon(Icons.tips_and_updates,
+                    child: const Icon(Icons.add_to_photos,
                         color: Color(0xff116144)),
                   ),
                 ),
-                label: 'Updates',
+                label: 'Generar solicitud',
               ),
               BottomNavigationBarItem(
                 icon: Padding(
                   padding: EdgeInsets.symmetric(vertical: size.height * 0.005),
                   child: const Icon(
-                    Icons.groups_outlined,
+                    Icons.view_list_outlined,
                     color: Colors.black,
                   ),
                 ),
@@ -116,31 +114,11 @@ class _bottomnavbarState extends State<bottomnavbar> {
                     padding: EdgeInsets.symmetric(
                         vertical: size.height * 0.005,
                         horizontal: size.width * 0.045),
-                    child: const Icon(Icons.groups, color: Color(0xff116144)),
+                    child:
+                        const Icon(Icons.view_list, color: Color(0xff116144)),
                   ),
                 ),
-                label: 'Communities',
-              ),
-              BottomNavigationBarItem(
-                icon: Padding(
-                  padding: EdgeInsets.symmetric(vertical: size.height * 0.005),
-                  child: const Icon(
-                    Icons.call_outlined,
-                    color: Colors.black,
-                  ),
-                ),
-                activeIcon: Container(
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20),
-                      color: const Color(0xffd8fdd2)),
-                  child: Padding(
-                    padding: EdgeInsets.symmetric(
-                        vertical: size.height * 0.005,
-                        horizontal: size.width * 0.045),
-                    child: const Icon(Icons.call, color: Color(0xff116144)),
-                  ),
-                ),
-                label: 'Calls',
+                label: 'Lista de solicitudes',
               ),
             ],
           ),

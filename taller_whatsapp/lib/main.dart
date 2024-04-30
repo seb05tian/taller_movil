@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:taller_whatsapp/Screens/genreport.dart';
+import 'package:taller_whatsapp/Screens/homepage.dart';
 import 'package:taller_whatsapp/Screens/login.dart';
 import 'package:taller_whatsapp/Widgets/bottom_navbar.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -19,7 +21,7 @@ class mainscreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: LoginScreen(),
+      home: GenReport(),
     );
   }
 }
