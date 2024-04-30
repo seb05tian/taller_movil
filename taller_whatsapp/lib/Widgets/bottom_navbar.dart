@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:taller_whatsapp/Screens/genreport.dart';
 import 'package:taller_whatsapp/Screens/homepage.dart';
 import 'package:taller_whatsapp/Screens/login.dart';
+import 'package:taller_whatsapp/Screens/requestlist.dart';
 
 class bottomnavbar extends StatefulWidget {
   const bottomnavbar({super.key});
@@ -16,7 +17,7 @@ class _bottomnavbarState extends State<bottomnavbar> {
   final List<Widget> _pages = <Widget>[
     HomePageMap(),
     GenReport(),
-    Icon(Icons.view_list)
+    RequestList()
   ];
   void _onItemTapped(int index) {
     setState(() {
