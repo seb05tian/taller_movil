@@ -9,6 +9,7 @@ class RequestList extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         backgroundColor: Color(0xff1D8D36),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.only(
@@ -35,7 +36,7 @@ class RequestList extends StatelessWidget {
             SliverList(
               delegate: SliverChildBuilderDelegate(
                 (BuildContext context, int index) {
-                  if (solicitudeexist == true) {
+                  if (solicitudeexist == false) {
                     return Container(
                       height: size.height * 0.39,
                       alignment: Alignment.center,
